@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<style>
+.fa {
+  padding: 20px;
+  font-size: 40px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 10%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+ 
+ background-color: #ffb3b3; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#ffffff 10%, #e6f2ff 82%,#85B3D1FF 110%);
+  
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+
+  width: 230px;
+  position: fixed;
+  z-index: 1;
+  top: 10%;
+  right: 0px;
+  background: 	#000000;
+  overflow-x: hidden;
+  padding: 8px ;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 45px;
+  color: #85B3D1FF;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #064579;
+}
+
+.main {
+  margin-right: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 0px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+   position: fixed;
+  top: 0;
+  width: 100%;
+  
+  
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+img {
+  border-radius: 4.1%;
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 28%;
+  padding: 5px;
+}
+.column1 {
+  float: left;
+  width: 22%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+
+
+
+
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: LightSalmon;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+
+.gradient-button {
+    margin: 10px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #FFF;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 25px;
+}
+.gradient-button:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: 8px 10px 12px;
+}
+.gradient-button-1 {background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)}
+.gradient-button-1:hover { background-position: right center; }
+
+.gradient-button-2 {background-image: linear-gradient(to right, #2BC0E4 0%, #EAECC6 51%, #2BC0E4 100%)}
+.gradient-button-2:hover { background-position: right center; }
+
+.gradient-button-3 {background-image: linear-gradient(to right, #7474BF 0%, #348AC7 51%, #7474BF 100%)}
+.gradient-button-3:hover { background-position: right center; }
+
+.gradient-button-4 {background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%)}
+.gradient-button-4:hover { background-position: right center; }
+
+.bgImage11 {
+	  /* The image used */
+	  background-image: url("Images/pic.PNG");
+
+	  /* Full height */
+	  height: 470px; 
+	  width:900px;
+	  margin: 0;
+	  border-radius: 5%;
+
+	  /* Center and scale the image nicely */
+	  /* background-position: float; */
+	  background-repeat: repeat;
+	  background-size: cover;
+
+
+	}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="topnav">
+   <a class="active" href="index.html">&#127758;CodeForPower</a>
+  <a href="JavaBasics.html">AP Computer Science A</a>
+ <a href="APbio.html">AP Bio</a>
+  <a href="news.html">News &#10084;</a>
+  <a href="Founders.html">About Us &#127993;</a>
+ 
+</div>
+
+   
+</div>
+<div style="font-size:4vw;">
+<div style="padding-left:25px">
+<br>
+<strong><p> News & Updates: </p></strong> 
+</div>
+<div style="padding-left:25px">
+<div style="font-size:2.5vw;">
+&emsp;Pinned News &#128204;
+<div style="font-size:2vw;">
+<p>
+&emsp;&emsp;Want to Join Us? 
+<br> &emsp;&emsp;There's great perks in becoming a member of our team! You can help us in numerous ways,
+<br>&emsp;&emsp;like spreading the website through social media, make suggestions, and much more!
+<br>&emsp;&emsp;(No Experience Needed!)
+ <br>
+<br>&emsp;&emsp;Simply email us at: jzhou3379@gmail.com 
+<br>
+<br>
+
+<form action="Founders.html">
+		   <center><button type="submit" class="gradient-button gradient-button-3">Founders & Board Members</button></center>
+		</form>
+		
+		<div style="font-size:2.5vw;">
+&emsp;Pinned News 8/23/2021 &#128204;
+<div style="font-size:2vw;">
+<p>
+&emsp;&emsp;Our new flyers! Check them out!  
+<center>
+
+<div class = "bgImage11">
+<div style="padding-left:115px">
+<div class="row">
+  <div class="column">
+  
+    &emsp; &emsp; &emsp; &emsp; <img src="Images/FLYER1.PNG" alt="pic" style="width:100%">
+  </div>
+  <div class="column">
+   &emsp;  <img src="Images/Flyer2.PNG" alt="hi" style="width:100%;">
+  </div>
+  <div class="column">
+  
+    &emsp; &emsp; &emsp; &emsp; <img src="Images/flyer3.PNG" alt="pic" style="width:102%">
+  </div>
+  </div>
+  </div>
+   </center>
+
+
+
+<div class="row">
+ <br>&emsp;&emsp;
+<br> &emsp;&emsp;
+
+
+
+<br>
+</p>
+
+<div style="font-size:2.5vw;">
+&emsp; News 8/16/2022 &#128293;
+<div style="font-size:2vw;">
+<p>
+&emsp;&emsp;We Now Cover AP BIO!!! 
+<br>
+<br> &emsp;&emsp;Check Out Our Detailed AP Bio Lectures.
+<br><br>
+
+</p>
+
+
+
+
+
+<div style="font-size:2.5vw;">
+&emsp; News &#128293;
+<div style="font-size:2vw;">
+<p>
+&emsp;&emsp;Join our discord server! <span class="iconify" data-icon="simple-icons:discord" data-inline="false"></span>
+<br>
+<br> &emsp;&emsp;Copy & paste this server link:<i> https://discord.gg/gjTJx29dMV</i>
+<br><br>
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="Images/newsLeaf.PNG" alt="hi" style="width:20%;height:20%;">
+<br>
+<br>
+<div style="padding-left:25px">
+<div style="font-size:2.5vw;">
+&emsp;Update 3/21/21 
+<i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+<span class="sr-only">Loading...</span
+<div style="font-size:2vw;">
+<p>
+&emsp;&emsp;We are currently working on a log-in system to keep track of your progress! :)
+<br> &emsp;&emsp;It should be done by this summer.
+<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="Images/news.PNG" alt="hi" style="width:50%;height:50%;">
+</p>
+<div style="font-size:2vw;">
+<br>
+<br>
+<center>
+Visit Us on Our Social Media!  
+</div>
+<center>
+<a href="https://www.facebook.com/codefor.power.5" class="fa fa-facebook"></a>
+<a href="https://www.twitter.com/CodeForPower1" class="fa fa-twitter"></a>
+<a href="https://www.youtube.com/channel/UCFT7gP0JT3bn57-z9l_vJAw" class="fa fa-youtube"></a>
+<a href="https://www.instagram.com/code_for_power" class="fa fa-instagram"></a>
+</center>
+<br>
+<br>
+
+<br>
+<br>
+
+<div style="font-size:1vw;">
+<center>
+	  <p>Founded by Jack & Jerry Zhou
+ in March of 2021 </p>
+
+		
+</body>
+</html>

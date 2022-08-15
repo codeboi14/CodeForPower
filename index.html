@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="google-site-verification" content="H7ARTFCy_RfrP19lnZkRTU5LOxnb9nnHYSTBNmNYzjs" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<style>
+.fa {
+  padding: 20px;
+  font-size: 40px;
+  width: 80px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 10%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f2f2f2;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+  }
+  
+  
+  
+  
+  
+  
+  
+	
+	.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+   position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("Images/home.PNG");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg1 {
+  /* The image used */
+  background-image: url("Images/home.PNG");
+
+  /* Full height */
+  height: 170%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgImage {
+	  /* The image used */
+	  background-image: url("Images/home.PNG");
+
+	  /* Full height */
+	  height: 900px; 
+	  width:100%;
+	  margin: 0;
+	  border-radius: 0%;
+
+	  /* Center and scale the image nicely */
+	  /* background-position: float; */
+	  background-repeat: repeat;
+	  background-size: cover;
+
+	}
+	.bgImage1 {
+	  /* The image used */
+	  background-image: url("Images/home4.PNG");
+
+	  /* Full height */
+	  height: 100%; 
+	  width:100%;
+	  margin: 0;
+	  border-radius: 0%;
+
+	  /* Center and scale the image nicely */
+	  /* background-position: float; */
+	  background-repeat: repeat;
+	  background-size: cover;
+
+	}
+
+
+p1 {
+  font-size: 220%;
+}
+p.thicker {
+  font-weight: 900;
+}
+
+
+.gradient-button {
+    margin: 10px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #FFF;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 25px;
+}
+.gradient-button:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: 8px 10px 12px;
+}
+.gradient-button-1 {background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)}
+.gradient-button-1:hover { background-position: right center; }
+
+.gradient-button-2 {background-image: linear-gradient(to right, #2BC0E4 0%, #EAECC6 51%, #2BC0E4 100%)}
+.gradient-button-2:hover { background-position: right center; }
+
+.gradient-button-3 {background-image: linear-gradient(to right, #7474BF 0%, #348AC7 51%, #7474BF 100%)}
+.gradient-button-3:hover { background-position: right center; }
+
+.gradient-button-4 {background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%)}
+.gradient-button-4:hover { background-position: right center; }
+
+p2{
+	text-shadow: 1px 1px #b3b3ff;
+}
+</style>
+</head>
+<body>
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MXL7KX5"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+      <a class="active" href="index.html">CodeForPower</a>
+  <a href="JavaBasics.html">AP Computer Science A</a>
+  <a href="APbio.html">AP Bio</a>
+  <a href="news.html">News &#10084;</a>
+ <a href="Founders.html">About Us &#x1f3f9;</a>
+  </div>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+<!--img src="Images/home.PNG" alt="hi" style="width:1250px;height:900px;"-->
+<div class="topnav">
+  <a class="active" href="index.html">&#127758;CodeForPower</a>
+  <a href="JavaBasics.html">AP Computer Science A</a>
+  <a href="APbio.html">AP Bio</a>
+  <a href="news.html">News &#10084;</a>
+  <a href="Founders.html">About Us &#127993;</a>
+  </div>
+  </div>
+ 
+ <br>
+ <br>
+  
+  <center>
+<div class = "bgImage"> 
+<p style="color:#e6f2ff" class="thicker">
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+&emsp;
+&emsp;
+&emsp;
+&emsp;
+&emsp;
+&emsp;
+&emsp;
+&emsp;
+&emsp;
+&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+<span style="font-size:60px;cursor:pointer" onclick="openNav()";>&#9776; Let's Get Started</span>
+</p>
+</div>
+<br>
+
+<img src="Images/AP55.PNG" alt="hi" style="width:100%;height:100%;">
+<img src="Images/111111111.PNG" alt="hi" style="width:100%;height:100%;">
+<img src="Images/logoOfficial.PNG" alt="hi" style="width:100%;height:100%;">
+<br>
+<div class= "bgImage1">
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<p style="font-size:220%;">Check out what we are up to! 
+  </p>
+<br>
+<br>
+
+<form action="news.html">
+<button class="button" style="vertical-align:middle"><span>News &#10084;</span></button>
+</form>
+<br>
+<br><br>
+<br>
+<br>
+<br><br>
+<br><br><br>
+<br>
+<br><br>
+<br>
+<br>
+<br><br>
+<br><br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br><br>
+<br>
+<br><br>
+<br>
+<br>
+<br><br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br><br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br>
+<p1>
+<strong>Join Us on Discord!  </strong><span class="iconify" data-icon="simple-icons:discord" data-inline="false"></span>
+<br>
+<br>Copy & paste this server link:<i> https://discord.gg/gjTJx29dMV</i>
+</p1>
+<br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br>
+<p1>
+<strong>About Us</strong></p1>
+<br>
+<br>
+<form action="Founders.html">
+		   <center><button type="submit" class="gradient-button gradient-button-3">Founders & Board Members</button></center>
+		</form>
+
+<br><br>
+<br><br>
+<br><br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br>
+<p1>
+<strong>Visit Us on Our Social Media!</strong></p1>
+<br>
+<center>
+
+    <a href="https://www.facebook.com/codefor.power.5" class="fa fa-facebook"></a>
+<a href="https://www.twitter.com/CodeForPower1" class="fa fa-twitter"></a>
+<a href="https://www.youtube.com/channel/UCFT7gP0JT3bn57-z9l_vJAw" class="fa fa-youtube"></a>
+<a href="https://www.instagram.com/code_for_power" class="fa fa-instagram"></a>
+
+	 
+	  <br>
+	  <br>
+	 
+	  
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+	  <p>Founded by Jack & Jerry Zhou
+ in March of 2021. Coded without a website builder. This website runs on HTML and Javascript. </p>
+ </center>
+	  </div>
+	
+</body>
+</html>
