@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  min-height: 740px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 1500px; /* Used to enable scrolling */
+ background-color: #ebfaeb; /* For browsers that do not support gradients */
+
+
+  background-image: linear-gradient(#cceeff 10%, #b3ffff 85%, #99e699 115%);
+  
+  
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:25px">
+<strong><bold>Unit 7.2: Advanced Method Recursion</bold></strong> 
+
+<br>
+<div style="font-size:2vw;">
+<br>
+AP loves to mess with you because it can. Here are some other advanced techniques on method recursion that you need to know. 
+<br>
+<br>
+<strong>Traversing Arrays With Method Recursion </strong>
+<br>
+Since method recursion behaves a lot like loops, you can use method recursion to traverse arrays and do things like searching/sorting. Below is an example demonstrating a search for a specific target value in an array.
+<br>
+<br>
+How is how our method will work:
+<br>
+<br>
+&emsp;1) If we have looked through every element, and the target isn't there, return -1.
+<br>&emsp;2) If the current item in the array matches the element, return its index (position).
+<br>&emsp;3) If #1 and #2 aren't true, restart the process with the next 
+element in the array (recursion). 
+<br>
+<br>
+&emsp;<img src="../Images/Recursion4.PNG" alt="" style="width:60%;height:60%;">
+<br>
+<br>
+<div class="parallax1"></div>
+<br>
+<strong>Method Recursion WITHIN a Method Recursion</strong>
+<br>
+Just like nested loops, you can have methods calling itself within itself. You MUST have a pen and paper to solve these kinds of questions, as it is extremely hard to do this just off memory. Here is a helpful tactic to solve these types of recursion questions: draw a tree, since each recursion branches off until it gets terminated. This is also great preliminary insight on what tree algorithms for competitive programming look like. 
+Take a deep breath, and brute force through the process. You have come so far. This is the last topic in the last unit. 
+<br>
+<br>
+ What will idk(10) return? Don't peak at the answer! Try to solve it on your own first.
+<br>
+<img src="../Images/Recursion5.PNG" alt="" style="width:50%;height:50%;">
+<br>
+<br>
+<strong>Here is how you can solve it:</strong>
+<br>
+<br>
+idk(10) = 10 + idk(10/2) + idk(10/4) = 10 + idk(5) + idk(2)
+<br>
+<br>
+<pre>We need to figure out what the branches, idk(5) and idk(2) will yield.
+</pre>
+<br>
+idk(5) = 5 + idk(5/2) + idk(5/4) = 5 + idk(2) + idk(1) 
+<br>
+<br>
+idk(2) = 2 + idk(2/2) + idk(2/4) = 2 + idk(1) + idk(0)
+<br>
+<br>
+<pre>
+See how idk(5) and idk(2) boils down to needing to know idk(1) & idk(0)? 
+Now, solve those.
+</pre>
+<br>
+idk(1) = 1 + idk(1/2) + idk(1/4) = 1 + idk(0) + idk(0)
+<br>
+<br>
+idk(0) = 0, as this condition triggers the if statement.
+<br>
+<br>
+<pre>
+Now, trace back up the "tree".
+</pre>
+<br>
+idk(0) = 0
+<br>
+<br>
+idk(1) = 1 + idk(0) + idk(0) = 1
+<br>
+<br>
+idk(2) = 2 + idk(1) + idk(0) = 2 + 1 + 0 = 3
+<br>
+<br>
+idk(5) = 5 + idk(2) + idk(1) = 5 + 3 + 1 = 9
+<br>
+<br>
+idk(10) = 10 + idk(5) + idk(2) = 10 + 9 + 3 = 22
+<br>
+<br>
+22 is our answer. When doing method recursion, 
+especially for linear ones (not the nested one we showed you above), 
+you should be able to see PATTERNS within recursion statements so that 
+solving it will be as quick as 1, 2, 3. 
+<br>
+<br>
+Wow! Congratulations! Looking back, this question wasn't 
+that hard was it? All you had to do was patiently follow the process step by step. 
+
+</p>
+<br>
+<br>
+<br>
+	<form action="../Unit7WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\Unit7.2Quiz.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Practice</button>
+          </form>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</div>
+<div class="parallax"></div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  min-height: 740px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 1500px; /* Used to enable scrolling */
+  background-color: #ebfaeb; /* For browsers that do not support gradients */
+
+  background-image: linear-gradient(#cceeff 10%, #b3d1ff 85%, #b3e6b3 115%);
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px"; "padding-right:25px">
+<strong><bold>Unit 6.1: Linear Search</bold></strong> 
+
+<br>
+<div style="font-size:2vw;">
+<br>
+<strong>Linear/Sequential Search</strong>
+<br>
+A linear search, also known as a sequential search, is pretty easy.
+ Loop through the entire array until you find your target.
+<br>
+<br>
+<img src="../Images/Search.PNG" alt="" style="width:80%;height:80%;">
+<br>
+<br>
+You can probably tell how straightforward linear searches are. 
+Just use a for loop that loops through the entire array, while checking each value for the target. 
+However, linear searches aren't really efficient. 
+Think about it like this, let's say you want to flip to page 450 in a large textbook.
+Linear search will find page 450 by checking page 1, then page 2, etc. In 
+extreme cases when your program is very long,
+doing linear searches can time-out in programming competitions, and  
+that's a big no-no in computer science. 
+<br>
+<br>
+However, other searches, like binary search, will make our program run MUCH faster! 
+
+<br>
+</p>
+
+<br>
+<br>
+<br>
+<br>
+	<form action="../Unit6WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\Unit6.1Quiz.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Practice</button>
+          </form>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</div>
+<div class="parallax"></div>
+</body>
+</html>

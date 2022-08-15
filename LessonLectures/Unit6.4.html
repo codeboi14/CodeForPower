@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  min-height: 740px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 1500px; /* Used to enable scrolling */
+   background-color: #ebfaeb; /* For browsers that do not support gradients */
+
+  background-image: linear-gradient(#cceeff 10%, #b3d1ff 85%, #b3e6b3 115%);
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px"; "padding-right:25px">
+<strong><bold>Unit 6.4: Selection Sort</bold></strong> 
+
+<br>
+<div style="font-size:2vw;">
+<br>
+<strong>Selection Sort: </strong>
+<br>
+The selection sort is a search and swap algorithm. It is pretty easy to understand, and is
+ an extension and upgrade from bubble sort. Here is how it works:
+<br>
+<br>
+<i>*Our selection sort process details sorting from least to greatest. For greatest to least, sort vise versa. </i>
+<br>
+<br>
+&emsp;1) The selection sort first spans the array and finds the lowest value. 
+<br>&emsp;&emsp;Once it finds that lowest value, it will swap its position in the array with the data at the smallest index. 
+<br>
+&emsp;2) Now, the data at index 0 is sorted in the first search and swap of our selection sort.
+<br>&emsp;&emsp; The next smallest index will then swap with the next smallest element in the remaining array etc. 
+<br>
+<br>
+<i>Note that the selection sort will SWAP for n - 1 iterations, where n is the size of the array. 
+(See how we will take 3 swaps to sort the array below, as the array has a length of 4). 
+This applies for all arrays, SORTED or UNSORTED, that undergo selection sort.
+ Lastly, selection sort ALWAYS runs in O(N) squared time, as for each swap, 
+ the sort needs to span the entire array to find the lowest value. </i>
+<br>
+<br>
+<strong>Visual Understanding:</strong>
+<br>
+We want to sort the following array with selection sort:
+<br>
+<br>
+<img src="../Images/SelectionSort1.PNG" alt="" style="width:1000px;height:100px;">
+<br>
+
+<br>
+<strong> &emsp;Step 1 </strong>
+<br>
+<br>
+<img src="../Images/SelectionSort2.PNG" alt="" style="width:1000px;height:600px;">
+<br>
+<br>
+<strong> &emsp;Step 2 </strong>
+<br>
+<br>
+<img src="../Images/SelectionSort3.PNG" alt="" style="width:1000px;height:550px;">
+<br>
+<br>
+<strong> &emsp;Step 3 </strong>
+<br>
+<br>
+<img src="../Images/SelectionSort4.PNG" alt="" style="width:1000px;height:550px;">
+<br>
+<br>
+<strong>
+Selection Sort Algorithm (least to greatest)</strong>
+<br>
+This code implements selection sort to sort an array named values from least to greatest. 
+<br>
+Note that <i> n </i> stands for the length of that array. 
+To sort from greatest to least, simply flip the symbol in the if statement.
+<br>
+<br>
+<img src="../Images/SelectionSort.PNG" alt="" style="width:1000px;height:370px;">
+
+</p>
+<br>
+<br>
+<br>
+<br>
+	<form action="../Unit6WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\Unit6.3Quiz.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Practice</button>
+          </form>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</div>
+<div class="parallax"></div>
+</body>
+</html>

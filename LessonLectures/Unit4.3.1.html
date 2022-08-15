@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  min-height: 700px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 2000px; /* Used to enable scrolling */
+  background: linear-gradient(55deg, #6699cc 0%, #cce6ff 51%, #f2f2f2 85%);
+  
+  
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<center>
+<div style="padding-left:20px"; "padding-right:25px">
+<strong><bold>Nested Loops Practice</bold></strong> 
+
+
+<div style="font-size:2vw;">
+
+<br> The formatting for these questions will be a bit different. Try not to peak at the answers if you didn't solve the question.
+This practice will be quite challenging, but you will thank yourself later for presisting through it! 
+<br>
+<br>
+<strong> Question 1: </strong>
+<br>What will the following code segment print?
+<br>
+<img src="../Images/nested2.PNG" alt="" style="width:75%;height:75%;"> 
+<br>
+</center>
+<div style="padding-left:40px"; "padding-right:25px">
+<br>1)
+<br>****
+<br>***
+<br>**
+<br>*
+<br>
+<br>2)
+<br>**** 
+<br>***
+<br>**
+<br>
+<br>3)
+<br>*
+<br>**
+<br>***
+<br>****
+<br>
+<br>4)
+<br>**
+<br>***
+<br>****
+<br>
+<br>
+<hr style="height:4px;border-width:0;color:black;background-color:black">
+<br>
+<br>This is the answer:
+<br>
+<br>2)
+<br>**** 
+<br>***
+<br>**
+<br>
+<center>
+<br>Explanation: There is no golden bullet to solving these questions. You must carefully trace the loop from the inside out.
+However, you will soon find a pattern. You can also put these questions in Eclipse to test for yourself. <i>*The AP exam has questions like these! </i>
+<br>
+<hr style="height:4px;border-width:0;color:black;background-color:black">
+<br>
+<br><strong>Question 2: </strong>
+<br>What will the following code segment print?
+<br>
+<br>
+<img src="../Images/nested3.PNG" alt="" style="width:75%;height:75%;"> 
+<br>
+<br>1)
+<br>!!!!!!!!!!!!!! 
+<br>\\!!!!!!!!!!//
+<br>\\\\!!!!!!////
+<br>\\\\\\!!//////
+<br>
+<br>2)
+<br>!!!!!!!!!!
+<br>\\!!!!!!//
+<br>\\\\!!////
+<br>
+<br>3)
+<br>\\\\\\!!//////
+<br>\\\\!!!!!!////
+<br>\\!!!!!!!!!!//
+<br>!!!!!!!!!!!!!!
+<br>
+<br>4)
+<br>\\\\!!////
+<br>\\!!!!!!//
+<br>!!!!!!!!!!
+<br>
+<br>
+<hr style="height:4px;border-width:0;color:black;background-color:black">
+<br>
+<br>This is the answer:
+<br>
+<br>1)
+<br>!!!!!!!!!!!!!! 
+<br>\\!!!!!!!!!!//
+<br>\\\\!!!!!!////
+<br>\\\\\\!!//////
+<br>
+<br>Explanation: Again, there is no golden bullet to solving these questions!
+ You must carefully trace the loop from the inside out.
+However, you will soon find a pattern. 
+You can also put these questions in Eclipse to test for yourself.
+<br>
+
+<hr style="height:4px;border-width:0;color:black;background-color:black">
+<br>
+<br>
+<strong>Question 3: </strong>
+<br>What will the following code segment print?
+<br>
+<br>
+<img src="../Images/nested4.PNG" alt="" style="width:75%;height:75%;"> 
+<br>
+<br>
+<br>1)
+<br>+----+ 
+<br>\\ &emsp;     /
+<br>//   &emsp;    \
+<br>\\  &emsp;    /
+<br>//  &emsp;   \
+<br>\\   &emsp;    /
+<br>//   &emsp;   \
+<br>+----+
+<br>
+<br>2)
+<br>+----+ 
+<br>\   &emsp;    /
+<br>/   &emsp;    \
+<br>\   &emsp;    /
+<br>/   &emsp;    \
+<br>\   &emsp;    /
+<br>/   &emsp;    \
+<br>+----+
+
+<br>
+<br>3)
+<br>+----+
+<br>\   &emsp;    //
+<br>/   &emsp;    \\
+<br>\   &emsp;    //
+<br>/   &emsp;    \\
+<br>\   &emsp;    //
+<br>/    &emsp;   \\
+<br>+----+
+<br>
+<br>4)
+<br>+----+
+<br>\\   &emsp;    //
+<br>//  &emsp;    \\
+<br>\\   &emsp;    //
+<br>//   &emsp;    \\
+<br>\\   &emsp;    //
+<br>//   &emsp;    \\
+<br>+----+
+<br>
+<br>
+<hr style="height:4px;border-width:0;color:black;background-color:black">
+<br>
+<br>This is the answer:
+<br>
+<br>2)
+<br>+----+ 
+<br>\   &emsp;    /
+<br>/   &emsp;    \
+<br>\   &emsp;    /
+<br>/   &emsp;    \
+<br>\   &emsp;    /
+<br>/   &emsp;    \
+<br>+----+
+<br>
+<br>
+<br>Explanation: You must carefully trace the loop from the inside out.
+However, you will soon find a pattern. 
+You can also put these questions in Eclipse to test for yourself. 
+<br>
+<br>
+</center>
+</p>
+<br>
+<br>
+	<form action="../Unit4WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\Unit4.3Quiz.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Final</button>
+          </form>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</div>
+<div class="parallax"></div>
+</body>
+</html>

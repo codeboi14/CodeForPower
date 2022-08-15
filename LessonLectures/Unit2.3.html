@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 4000px; /* Used to enable scrolling */
+  background-color: #ffb3b3; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#e6f2ff 10%, #ffe6cc 85%, #ffe6e6 110%);
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px"; style="padding-right:25px">
+<strong><bold>Unit 2.3: Methods</bold></strong> 
+<div style="font-size:2vw;">
+<br><strong>What Are Java Methods? </strong>
+<br>
+A method is a group of code that performs a SPECIFIC task.
+ They are used to make code shorter and easier to read.
+Furthermore, methods are always created within a class, and are identified by the Java Compiler 
+by its syntax of having a modifier, return type, name, and parenthesis 
+(which holds parameters if they exist). 
+These will be discussed in greater detail below. 
+
+<br>
+<br>
+<strong>Introduction to Modifiers </strong>
+<br>
+
+Modifiers determine how the method can be used, and 
+who gets to access to them. There are 
+two types of modifiers in Java: access and 
+non access modifiers. In short, 
+access modifiers determine the scope of the method, and non-access
+ modifiers determine the method's inheritance capabilities (more on 
+ inheritance later).
+<br>
+<br>
+<strong>Return Types </strong>
+<br>
+Return types determine what the method outputs
+ after it performs a certain action.
+ Return types can be anything from data structures (arrays, arrayLists, etc.) 
+ to data types (ints, doubles, booleans, Strings, etc.).
+ If a method does not return anything, the keyword "void" can be used to signify that. 
+ Methods that don't return anything but change an instance field (attribute) of a class
+ are known as <i>mutator methods</i>, or setters. Methods that return
+ the value stored inside an instance field are known as <i>accessor
+ methods</i> or getters. 
+ <br>
+ <br>
+Note that you can return anywhere in your code- this isn't just limited to methods. 
+For example, you can return at the end of an if else, for loop, etc. 
+However for the AP exam, return will just be used in methods. 
+<br>
+<br><strong>Method Names</strong>
+<br>
+Method names help Java (and you) identify different methods.
+To properly name methods, follow the same naming convention when naming variables.
+<br>
+<br>
+Note that two or more methods can have the same name! However, their parameters must be different so that 
+a distinction can be made between the two methods. This is called
+ method overloading (we will explore this concept in greater detail later).
+<br>
+<br><strong>How are Java methods declared? </strong>
+<br>All methods have 5 components to them; all of which are listed below.
+<br>&emsp;1) Modifier
+<br>&emsp;2) Return Type
+<br>&emsp;3) A Name
+<br>&emsp;4) Parameters
+<br>&emsp;5) Body
+<br>
+<br>
+The syntax for declaring a method is shown below. 
+Note that the method name and its parameters are
+ called the <i>method signature</i>, as these are the components that identify a method. 
+When you use a method, the method signature
+will be called. 
+<br>
+<br> 
+&emsp;Syntax: 
+<br> &emsp;&emsp;accessModifier nonAccessModifer returnType name(parameters)
+<br> &emsp;&emsp;{
+<br> &emsp;&emsp;&emsp;&emsp;//your code
+<br> &emsp;&emsp;} 
+<br> 
+<br>&emsp; <strong>Example 1: </strong>
+<br> 
+<br> &emsp;&emsp;public static void swap (int variable1, int variable2) 
+<br>&emsp;&emsp; {
+<br>  &emsp;&emsp;&emsp;&emsp;   //code not shown
+<br> &emsp;&emsp;}
+<br> 
+<br> &emsp;Breakdown:
+<br>&emsp;&emsp;1) accessModifier: public
+ <br>&emsp;&emsp;2) nonAccessModifier: static
+<br>&emsp;&emsp;3) returnType: void
+ <br>&emsp;&emsp;4) name: swap
+<br>&emsp;&emsp;5) parameters: (int variable1, int variable2)
+<br>
+<br>
+<i>NOTE: 
+If you don't declare a nonAcessModifer (which is not mandatory), Java assigns a default one to you.</i>
+<br> 
+<br>&emsp; <strong>Example 2:</strong>
+<br>
+<br> <img src="../Images/Methods.PNG" alt="" style="width:40%;height:40%;">
+<br>
+<br>&emsp;Breakdown: 
+<br>&emsp;&emsp;1) A method must begin with a header containing its access modifier (public). 
+<br>&emsp;&emsp;2) Next, the return type (double) is stated, which is what the method will output.
+<br>&emsp;&emsp;3) After the return type is the name of your method (follow proper naming convention).
+<br>&emsp;&emsp;4) Finally, the parameters of the method are listed. The parameters are the attributes located 
+inside the (). 
+<br>
+<br>Think of parameters this way:
+<br>
+You want the pow method above to give the result of taking a base to its exponent. 
+However, how does the method know what base and exponent 
+you want it to use?
+ Hence, parameters double base and double exponent are passed into the method. 
+ As we metioned before, the parameter is optional. If you don't want to give
+any data to the method, that's fine. 
+ <br>
+ <br><strong>Parameters </strong>
+ <br>
+Parameters, or arguments, are the data that is passed into the method
+ for altercation or computation. Note that parameters passed
+ into a method can be anything you like, and do not have to be used in the method itself.
+<br>
+<br>Example:
+<br>
+<br>
+<img src="../Images/Parameters.PNG" alt="" style="width:80%;height:80%;">
+<br>
+<br><strong>Body of A Method</strong>
+<br>The body to a method is the code that it contains. This code block perform what the method does.
+<br>
+<br>
+<div class="parallax1"></div>
+<br>
+<strong>Method Overloading</strong>
+<br>Method overloading is when two or more methods share
+ the same name, but have different AMOUNTS or TYPES of parameters.
+
+<br>
+
+<br><img src="../Images/Overloading.PNG" alt="" style="width:80%;height:80%;">
+
+<br> 
+<br>
+<br><strong>Shadowing </strong>
+<br>Shadowing is an error that occurs when everything is the same. For methods,
+that's having the same name and parameter. For variables, its having the same name.
+<br>
+<br>
+<img src="../Images/Shadowing.PNG" alt="" style="width:80%;height:80%;">
+<br>
+<br>
+<i>Side Note: Did you catch it? The class name is not capitalized, which violates proper naming convention.
+<br> When doing computer science, you have to be constantly aware!</i>
+<br>
+
+<br>For the above example, do you see how the parameter variable names and instance
+ variables are the same? 
+ <br>How does Java know which is which? Hence, shadowing occurs.
+<br>
+To prevent shadowing, you can use the <strong> this </strong> method, or change your variable names.
+<br>The two methods below demonstrate how shadowing is avoided. 
+<br>
+<br>
+<img src="../Images/Shadowing1.PNG" alt="" style="width:80%;height:80%;">
+<br>
+<br><i>Did you notice how the two methods above ironically produce shadowing? May you list the reasons why?
+</p>
+<br>
+<br>
+<br>
+	<form action="../Unit2WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="Unit2.3.1.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Modifers</button>
+          </form>
+</div>
+</div>
+<div class="parallax"></div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</body>
+</html>

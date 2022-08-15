@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 4000px; /* Used to enable scrolling */
+  background-color: #ffb3b3; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#e6f2ff 10%, #ffe6cc 85%, #ffe6e6 110%);
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px"; style="padding-right:25px">
+<strong>Unit 2.3.1: Java Modifers</strong> 
+
+
+<div style="font-size:2vw;">
+<br>
+Modifiers are split into two groups: access & non access.
+<br>
+<br><strong>Access Modifiers </strong>
+<br>
+You have probably seen the word "public" for quite a few times when writing classes and methods. 
+Well, the public keyword is actually an access modifier setting the ACCESS level (who has
+ the ability 
+to call and use that block of code)  for those classes
+and methods. Note that access modifers can also apply to constructors, attributes, etc.
+<br>
+<br> <img src="../Images/Modifers.PNG" alt="" style="width:90%;height:90%;">
+
+<br>
+Besides the default modifier, going down the chart results in increased "security" for your code. 
+<br>In the AP Computer Science A course, you will just need to know how to use public and private. 
+<br>
+<br>
+<strong>Using Public</strong>
+<br> You should use public if you want your code to be accesible to other classes.
+<br> For example, you created a helpful Math class that does mathamatical operations, 
+like: pow, sqrt, etc.
+<br> You probably want to declare that Math class as public so you can use it in 
+your other classes, like a class that solves the quadratic equation.
+<br>
+<br>
+<strong>Using Private</strong>
+<br>The instance variables(attributes) in your classes should be declared as private. 
+<br>Why? Let's say you created a helpful class performing the quadratic equation.
+<br>If you declare variables in that class as public, other classes oustide can
+<br>change your lovely variables and mess the code up! 
+<br>Furthermore, other programmers have no reason to access your personal variables. 
+<br>They just need to pass in their equation
+for your quadratic equation code to solve. 
+<br>
+<br>
+<div class="parallax1"></div>
+<br>
+<strong>Non-Access Modifiers:</strong>
+<br>There are two non-access modifiers that you should know: final & static.
+<br>
+<br>&emsp;1) final
+<br>
+<br>&emsp;&emsp;The final modifier means that something can never be changed. 
+<br>
+<br>&emsp;&emsp;For example, you have a attribute called pi. 
+Well, pi is always 3.14, so you don't want that to be altered. 
+<br>&emsp;&emsp;Thus, you can declare
+the attribute like this:
+<br>
+<br>&emsp;&emsp;final int pi = 3.14;
+<br>&emsp;&emsp;//no one can change the value of our pi int. 
+<br>
+<br>&emsp;2) static
+<br>
+<br>&emsp;&emsp;Static is usually used with methods, 
+and it means that the method can be accessed 
+<br>&emsp;&emsp;without creating an object of that class (class level). 
+<br>
+<br>&emsp;&emsp;Below is an example on using static:
+<br>
+<br> &emsp;&emsp;<img src="../Images/Static.PNG" alt="" style="width:80%;height:80%;">
+<br>
+<br>
+<strong>Method Scope</strong>
+<br>
+Only code declared within the curly brackets {} of a method are within the method's scope.
+<br>This simply means that that code inside the {} are a part of the method.
+ 
+<br>
+ <i>Note that this concept is the same for classes, loops, 
+ and anything else that contain curly brackets. </i>
+
+</p>
+
+<br>
+<br>
+<br>
+	<form action="../Unit2WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="Unit2.3.2.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Method Constructors</button>
+          </form>
+</div>
+</div>
+<div class="parallax"></div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</body>
+</html>

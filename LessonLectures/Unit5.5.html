@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  min-height: 750px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 1500px; /* Used to enable scrolling */
+  background: linear-gradient(55deg, #c2f0c2 5%, #cce6ff 61%, #f2f2f2 95%);
+  
+  
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px"; "padding-right:25px">
+<strong><bold>Unit 5.5: ArrayList Methods</bold></strong> 
+
+<br>
+<div style="font-size:2vw;">
+<br>
+<strong>ArrayList Methods</strong>
+<br>
+Unlike arrays, the ArrayList provides methods to access, 
+manipulate, remove, and add data. 
+<br>These methods are fundamental to using ArrayLists, 
+and you are required to memorize them
+ for the AP exam. 
+This might seem a bit daunting, but you will quickly see how EASY 
+and straight-forward these methods are.
+<br>
+<br>
+<div style="font-size:3vw;">
+<strong>Adding Elements: </strong>
+</div>
+<br><strong>ArrayList Method: add(Obj)</strong>
+<br>
+<br>
+This method adds an object to the end of the ArrayList. 
+You CANNOT add objects that the targeted ArrayList can't store. 
+For example, adding a String to a type Integer ArrayList. 
+<br>
+<br>
+Example of using the add() method: 
+<br>
+<br>
+<img src="../Images/ArrayListMethods1.PNG" alt="" style="width:65%;height:65%;">
+<br>
+<pre>Example Explanation:</pre>
+Since the myNum ArrayList contains no objects at the time of its declaration, 
+adding int 3 (an object of the Integer Class) 
+will result in the last position of the ArrayList (index 0) to be updated with 3. 
+The second statement will then execute, and add 5 to the end of the ArrayList at index 1.
+Remember, an ArrayList is dynamic and therefore, has no established/predetermined size! 
+(You will see why this size thing is very useful later).
+<br>
+<br>
+You might be wondering: Hey! ArrayLists can only store objects, so why are you adding a primitive data type, int, to the ArrayList?!?
+<br>
+<br>
+Well, this is possible thanks to the wonderful wrapper classes! Primitives are the objects of the class that wraps them, so you can go about with a seamless user experience!
+<br>
+<br>
+<strong>ArrayList Method: add(index, obj) </strong>
+<br>
+<br>
+Instead of justing adding an object to the end of the ArrayList,
+this method adds an object to a specified index. 
+<br>
+<br>
+Example of .add(index, obj):
+<br>
+<br>
+<img src="../Images/ArrayListMethods.PNG" alt="" style="width:65%;height:65%;">
+<br>
+<pre>Example Explanation:</pre>
+After adding the four characters (a, b, c, d) to the ArrayList (since code runs top down),
+ the ArrayList will insert the character e at index position 1.
+ Having done this, the character at index 1 will no longer be 'b', but rather,
+ 'e'. Note that inserting any object into an index -that is not the last position 
+ of an ArrayList- will result in the incrementation of the indexes of the 
+ following elements. 
+ Thus, the character 'b' will get pushed into index 2, 'c' into index 3, etc.
+ If you think about it, this makes perfect sense. When you insert something, 
+ you push the rest down. 
+<br>
+<br>
+<div style="font-size:3vw;">
+<strong>Access/Get Elements: </strong>
+</div>
+<br>
+<strong>ArrayList Method: get()</strong>
+<br>
+<br>
+To access elements in an ArrayList, you must use the get() method 
+and refer to the element's index number.
+<br>
+<br>
+Example:
+<br>
+<br>
+<img src="../Images/ArrayListMethods2.PNG" alt="" style="width:65%;height:65%;">
+<br>
+<br>
+<div style="font-size:3vw;">
+<strong>Changing Elements: </strong>
+</div>
+<br>
+<strong>ArrayList Method: set(index, Obj)</strong>
+<br>
+<br>
+To modify an element, use must use the set() method and specify the index number.
+<br>
+<br>
+Example of the set(index, Obj) method:
+<br>
+<br>
+<img src="../Images/ArrayListMethods3.PNG" alt="" style="width:65%;height:65%;">
+<br>
+<pre>Example Explanation:
+</pre>
+The code first adds the elements to the ArrayList. 
+Executing the set method, the original value at index 1 
+is changed to 2.1 instead. The new ArrayList will 
+therefore contain the elements, 0.2, 2.1, and 4.3.
+<br>
+<br>
+<div style="font-size:3vw;">
+<strong>Removing Elements: </strong>
+</div>
+<br>
+<strong>ArrayList Method: remove(index)</strong>
+<br>
+<br>
+To remove an element, use the remove() method, and specify the index number.
+<br>
+<br>
+Example:
+<br>
+<br>
+<img src="../Images/ArrayListMethods4.PNG" alt="" style="width:65%;height:65%;">
+<br>
+<pre>Example Explanation:
+</pre>
+We removed the "Mike" element at index 0 from the ArrayList. 
+<br>
+<br>
+<strong>Removing A Specific Object 
+<br>
+<br>
+ArrayList Method: remove(obj) </strong>
+<br>
+<br>
+This method searches through the ArrayList for the object you passed. 
+If it occurs, the first occurrence of that object is removed, and true is returned.
+ If the object you passed doesn't exist, false is returned, and nothing is removed. 
+<br>
+<br>
+<i>Note* The remove methods are sometimes referred to as void methods, 
+as on numerous occasions, 
+you don't care what they return. You just need the element removed 
+from the ArrayList. 
+</i>
+<br>
+<br>
+Example of the remove(obj) method:
+<br>
+<br>
+<img src="../Images/ArrayListMethods5.PNG" alt="" style="width:60%;height:60%;">
+<br>
+<pre>
+Example Explanation:
+</pre>
+The first occurrence of the String "Mike" is removed from the ArrayList. 
+<br>
+<br>
+<div style="font-size:3vw;">
+<strong>LOGIC ERRORS:</strong>
+</div>
+<br>
+You have to be extremely careful when using the remove() method, as LOGIC ERRORS might occur.
+ The question below showcases this.
+<br>
+<br>
+Question: Given an already declared ArrayList called myNum, which contains the 
+Integers: 2, 2, 2, 2, 5, 5. 
+<br> How do you remove all even digits in the myNum ArrayList?
+<br>
+<br>Our Solution:
+<br>
+<br>
+<img src="../Images/ArrayListMethods6.PNG" alt="" style="width:65%;height:65%;">
+<br>
+<br>
+This code might seem good on the surface, but it won't 
+give us our desired answer! Here's why:
+<br>
+<br>&emsp;1) At first, i (which stands for index) is 0. 
+You successfully remove the even digit 2 from the ArrayList.
+<br>&emsp;&emsp;The whole ArrayList now becomes: 2, 2, 2, 5, 5. 
+<br>&emsp;2) i gets incremented to 1. HOWEVER! At index 1, you SKIP 
+the even digit at index 0. 
+<br>&emsp;&emsp;You remove the even digit at index 1 for the ArrayList. 
+The ArrayList now becomes: 2, 2, 5, 5
+<br>&emsp;3) i gets incremented to 2. HOWEVER! 
+The even digit at index 0 and 1 is SKIPPED 
+and not removed. 
+<br>&emsp;&emsp;At index 2 of the new ArrayList: 2, 2, 5, 5, the digit is odd, 
+so nothing gets removed.
+<br>&emsp;4) i gets incremented to 3. At index 3, the digit is odd, 
+so nothing gets removed. 
+<br>&emsp;&emsp;The loop then finishes when i goes to 4, as 4 is 
+not less than the length/size 
+of the current ArrayList. 
+<br>
+<br>
+<i>What gets outputted is an ArrayList containing the digits: 2, 2, 5, 5. 
+This is not what you want!</i>
+<br>
+<pre>
+How To Overcome This Logic Error:
+</pre>
+How do we avoid this tragic issue? Well, start 
+backwards and not forwards so nothing gets skipped! 
+<br>
+<br>
+<img src="../Images/ArrayListMethods7.PNG" alt="" style="width:65%;height:65%;">
+<br>
+<br>
+This will give us our desired ArrayList just containing odd digits: 5, 5 
+<br>
+Why? Trace through the loop like we did for the previous example!
+<br>
+<br>
+<div style="font-size:3vw;">
+<strong>Finding The Length of The ArrayList
+</div>
+<br>
+ArrayList Method: size( ) </strong>
+<br>
+<br>
+This method returns how many elements are in the ArrayList, 
+just like how the method <i>length </i>
+ returns that for a given array.
+ This is useful for traversing an ArrayList within loop iterations, 
+ and for knowing how an ArrayList is dynamically changing over the course of 
+ several mutations. An example of this is shown below.
+<br>
+<br>
+Example of the size() method:
+<br>
+<br>
+<img src="../Images/ArrayListMethods8.PNG" alt="" style="width:65%;height:65%;">
+<br>
+<pre>
+Example Explanation:
+</pre>
+Performing the size() method will return 3, which indicates 
+how many elements the ArrayList stores.
+<br> Note that the size() method has no parameters.
+<br>
+<br>
+<div class="parallax1"></div>
+<br>
+<div style="font-size:3vw;">
+<strong>Finding the indexOf an Element</strong>
+</div>
+<br>
+<strong>ArrayList method: indexOf(obj) </strong>
+<br>
+<br>
+This method returns the index of the object within the targeted ArrayList. 
+This is just like the indexOf method for regular arrays and Strings. 
+Note that if the object is not found to be present within the ArrayList, the method will return -1 to indicate this. An example of its usage is shown below.
+<br>
+<br>
+Example of indexOf(obj) method:
+<br>
+<br>
+<img src="../Images/ArrayListMethods9.PNG" alt="" style="width:65%;height:65%;">
+<br>
+<pre>
+Example Explanation:
+</pre>
+Notice that two Mikes are present within the ArrayList names. 
+The indexOf method will return the index of Mike's first occurrence. 
+In this case, since Mike appears first in index 0, the method will return 0.
+<br>
+<br>
+<div style="font-size:3vw;">
+<strong>Finding If an Element Exists in an ArrayList</strong>
+</div>
+<br>
+<strong>ArrayList Method: contains(obj)</strong>
+<br>
+<br>
+This method returns a boolean (true or false) depending on whether 
+the obj is present within the ArrayList. If the obj is present 
+within the ArrayList, it will return true. If not, the method will return 
+false. Pretty self-explanatory. 
+<br>
+<br>
+Example:
+<br>
+<br>
+<img src="../Images/ArrayListMethods10.PNG" alt="" style="width:65%;height:65%;">
+<br>
+<pre>
+Example Explanation:
+</pre>
+Since the contains(obj) method returns a boolean, it can be used as the conditions.
+ In the above example, since Jake is not within the "names" ArrayList, the method will return false.
+ Since the if statement does not execute, the else print statement is executed instead.
+<br>
+<br>
+<div style="font-size:3vw;">
+<strong>Clearing the Entire ArrayList </strong>
+</div>
+<br>
+<strong>ArrayList Method: clear() </strong>
+<br>
+<br>
+This method clears the entire ArrayList of its contents and returns no value. An example of this is shown below.
+<br>
+<br>
+Example of the clear() method:
+<br>
+<br>
+<img src="../Images/ArrayListMethods11.PNG" alt="" style="width:65%;height:65%;">
+<br>
+<pre>Example Explanation:</pre>
+By performing the clear() method on the "names" ArrayList, 
+the entire content in the "names" ArrayList is erased. 
+<br>The ArrayList will contain nothing after the method's execution.
+<br>
+</p>
+<br>
+<br>
+<br>
+	<form action="../Unit5WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\Unit5.3Quiz.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Practice</button>
+          </form>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</div>
+<div class="parallax"></div>
+</body>
+</html>

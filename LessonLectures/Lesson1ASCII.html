@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  min-height: 700px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 1500px; /* Used to enable scrolling */
+  background-color: #ffb3b3; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#e6f2ff 10%, #ffe6cc 85%, #ffb3b3 110%);
+  
+  overflow-x: hidden;
+}
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px">
+<strong><bold>ASCII (Data Representation)</bold></strong> 
+
+
+<div style="font-size:2vw;">
+All data stored in a computer must be represented (or encoded) as  bits, 0's and 1's.  
+Standard codes (ASCII and Unicode) were established so that data (letters, numbers, punctuation etc.) 
+could be exchanged among different kinds of computers easily. 
+<br>
+<br><strong>ASCII</strong>
+<br>
+<br>ASCII is short for The American Standard Code for Information Interchange.
+<br>
+<br>ASCII characters/format that you should memorize:
+<br>
+<br>&emsp;32 stands for (Space or Blank)  
+<br>&emsp;48..57 &#8594;  '0'..'9' (digits)  
+<br>&emsp;65..90 &#8594;  'A'..'Z' (UPPERCASE LETTERS)  
+<br>&emsp;97..122 &#8594; 'a'..'z' (lowercase letters)  
+<br>&emsp;<i>(others ASCII values represent punctuation of "special" characters)
+<br>
+<br>NOTE: ASCII is 8-bit code, meaning that there are 256 (2^8) different ASCII characters. 
+This is enough for the English alphabet, but it might not be enough for other languages like Chinese. 
+Hence, unicode needs to be used to represent those characters (16-bit code).</i>
+<br>
+
+<br><strong> Programming With ASCII </strong>
+<br>Because some ASCII values represent chars, you can do the following conversion:
+<img src="../Images/example.PNG" alt="example" style="width: 80%"; "height: 80%">
+
+<br>Outputs: (65, 66,...90) since each char character corresponds with that ASCII numerical value. 
+<br>If you don't know what a for loop is, don't STRESS! It will be explained in depth on Unit 4. 
+
+<br>
+
+<br><strong>Unicode </strong>
+<br>Unicode is the successor to ASCII, with 16 bits or 2^16 (65,536) possible combinations,  
+enough for all the known languages. 
+<br> 
+<br>
+<i>Note* The first 256 Unicode chars  are the ASCII chars.</i>
+<br>Summary: all characters, letters, digits, and punctuation are stored as ASCII/Unicode digits. 
+
+</div>
+
+</p>
+
+<br>
+	<form action="../Lesson1WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\ASCIIQuiz.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Practice</button>
+          </form>
+		  </div>
+		  <div class="parallax"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</body>
+</html>

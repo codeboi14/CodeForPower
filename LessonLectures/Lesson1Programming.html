@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  min-height: 700px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 5000px;/* Used to enable scrolling */
+
+  background-color: #ffb3b3; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#e6f2ff 10%, #ffe6cc 85%, #ffe6e6 90%);
+}
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+img {
+  border-radius: 5%;
+}
+
+</style>
+<div style="font-size:2vw;">
+<div style="padding-left:25px">
+<h1>Programming Preliminary Lesson</h1>
+<hr>
+</head>
+<body>
+<p>
+<div style="font-size:2vw;">
+<strong><bold>Programming Style & Comments</bold></strong> <br>
+There is a particular programming style that demonstrates clarity and 
+<br>professionalism that you should follow when programming Java.
+<br>
+<br>Here is an example of a simple Java code (don't stress what each part 
+<br>means, but look at the style and spacing):
+<br>
+<br>
+<img src="../Images/HelloWorldJava.PNG" alt="Code Sample" style="width:50%;height:50%;">
+<br>
+<br>1) Comments are ignored by the compiler, and are for humans to read only.
+<br>  Two forward slashes (//) are used to represent short comments.
+<br>  
+<br>2) (/*) followed by a closing (*/) acts as symbols that show longer comments. 
+<br>
+<br>3) Notice the indentation and spacing that makes the code easy to read. 
+<br>
+<br>
+<br><strong>Compiling & Errors</strong>
+<br>Computers only understand 1s and 0s, so they don't understand your 
+<br>Java code. Thus, an interpreter is used within the developer environment 
+<br>that translates your code to a language understood by the machine. This 
+<br>process is called compiling.
+<br>
+<br>An error occurs when your code can't compile. There are 3 types of errors:
+<br>
+<br>&emsp;1) Syntax error: simplest to solve, just follow the correct format. 
+<br>
+ <br>   &emsp; &emsp;Example) To print a statement, you should type: 
+<br>	
+<br>	&emsp; &emsp;System.out.print("statement goes here");
+<br>
+<br>	&emsp; &emsp;However, if you write Stem.out.print("hi"); , this won't compile. 
+<br>
+<br>&emsp; 2) Run-time error: slightly harder to solve. An example can be making the program 
+<br>&emsp; loop indefinitely(more on loops in later chapters, don't stress this part).
+<br>
+<br>	&emsp;&emsp;&emsp;for(int i = 10; i > 0; i++){
+<br>			&emsp;&emsp;&emsp;&emsp;	//program does stuff
+<br>	&emsp;&emsp;&emsp;}
+<br>	
+<br>&emsp;<i>*notice that "i" can never reach a value less than 0 (condition to end the loop) 
+<br>&emsp;as it is added when it should be subtracted. As a result, this loop continues 
+indefinitely. </i>
+<br>
+<br>&emsp;3) Logic error: this will be pretty hard to solve, as the literal logic of 
+<br>&emsp;your code has errors. A simple real world logical error can be trying to call 
+<br>&emsp;your friend with a rock instead of a phone. 
+<br>
+<br>
+<div class="parallax1"></div>
+<br>
+<br><strong> OK, now you know the basics, let's Program!!!!!!  </strong>
+<br>Like any other first program, your first Java program will be the famous 
+<br>"hello world"!
+<br>
+<br>Write the following in Eclipse:  </strong>
+<br>
+
+<img src="../Images/HelloWorld.PNG" alt="Code Sample" style="width:50%;height:50%;">
+
+
+
+<br>
+<br><strong>Breakdown of the code: </strong>
+<br>
+<br>This "hello world" program shows some of the basic requirements of a Java program. 
+ <br> 
+ <br> Starting off, see that code is always executed top-down in Java. So line 1 is performed first, then line 2, etc. 
+<br>
+<br>&emsp;1. The class is a fundamental aspect of Java programming, as it is the blueprint of an 
+<br>&emsp; object(this concept is explained in depth on Unit 2). The class in the program we wrote is: 
+<br>
+<br>&emsp; &emsp;&emsp;<strong>public class HelloWorld </strong>
+<br>
+<br>&emsp;2. This program uses methods from the Java Library:
+<br>
+<br><strong>&emsp;&emsp; &emsp;System.out.print("Hello World"); </strong>
+<br>
+<br>&emsp;&emsp;&emsp;The Java Library is a collection of pre-written classes & methods that programmers
+<br>&emsp;&emsp;&emsp;may reuse. The library makes performing many things easy, such as, 
+<br>&emsp;&emsp;&emsp;printing something. Instead of writing that lengthy code to physically print something, the 
+<br>&emsp;&emsp;&emsp;library provides the pre-coded method: System.out.print(), which makes doing 
+<br>&emsp;&emsp;&emsp;the operation very simple. 
+<br>
+<br>&emsp; 3. Programmers may create their own classes, which can contain numerous 
+<br>&emsp;programmer-defined methods (code that does a specific thing, for example, taking 
+the square root). 
+<br>
+<br>&emsp;4. <strong>public static void main (String[] args) </strong>
+<br>
+<br>&emsp;&emsp;&emsp;This is a special method called the "main" method.
+<br>&emsp;&emsp;&emsp;This is used to run your program. Just write this word for word- you will 
+<br>&emsp;&emsp;&emsp;understand why we must do it in this way later. 
+<br>
+<br><i>Note* The first statement EXECUTED in every Java program is always the first statement 
+in the main method. </i>
+ <br>
+<br>&emsp; 5. All the statements in a class or method definition must be enclosed in a 
+<br>&emsp;pair of curly braces {}, which represents where that code segment starts and ends.  
+<br>
+<br>&emsp;6. Java is case-sensitive, meaning that the words Public & public are 
+<br>&emsp;completely different things to poor little Java.  
+<br>
+<br>&emsp;&emsp;- Java has reserved words (keywords) such as public, class, static, void etc. 
+ <br>&emsp;&emsp;that use lowercase letters only. These words have special meaning to Java and 
+ <br> &emsp;&emsp;may not be used for anything  else.
+ <br> 
+<br>&emsp;&emsp;- Java identifiers are not keywords.
+<br>
+<br>&emsp;&emsp;- Class names from the Java Library (String, System, etc.), and programmer-defined 
+ <br> &emsp;&emsp;classes (like the HelloWorld class we did) begin with an uppercase letter. 
+<br>  
+<br>&emsp;7. All Java statements must end with a semi-colon. 
+<br>
+</div>
+<strong>
+<div style="font-size:2.1vw;">
+<br>Phew. That was a lot for your first program. Learning Java is like learning a 
+completely new language. 
+<br>It takes time to get used to it, but its ok! 
+You are doing great! 
+ Treat yourself like I did when I programmed "Hello World" with some delicious ice cream. 
+<br></strong>
+
+</div>
+</p>
+
+
+<br>
+<br>
+<br>
+<form action="../Lesson1WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\Quiz4.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Unit 1 Final</button>
+          </form>
+</div>
+<div class="parallax"></div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+
+</body>
+</html>

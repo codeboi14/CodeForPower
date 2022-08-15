@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 2000px; /* Used to enable scrolling */
+  background: linear-gradient(55deg, #adebeb 0%, #99CCFF 51%, #D3D3D3 85%);
+  
+  
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px"; "padding-right:25px">
+<strong><bold>Unit 3.3: DeMorgan's Laws</bold></strong> 
+
+
+<div style="font-size:2vw;">
+<br>
+<strong>Boolean Expressions II</strong>
+<br>
+Without understanding how boolean expressions are
+ formed and what their purposes are, mastery over conditional
+ statements will be impossible. Below are some of the very basic 
+ boolean returning operators that are <br>quizzed on the 
+ AP ComputerScienceA exam:
+ 
+<br>
+<br><strong>1) &&</strong>
+<br>
+<br>&emsp;The && (and-and) operator requires two conditions to be true for the if statement to be true.
+<br>
+<br>&emsp;For example, you need to find a number that is between 0 & 9. 
+
+<br>
+<br>
+&emsp;<img src="../Images/DeMorgan1.PNG" alt="" style="width:60%;height:60%;">
+
+<br>
+<br>&emsp;See that num has to satisfy two conditions for the if statement to be true. 
+<br>
+<br><strong>2) ||</strong>
+<br>
+<br>&emsp;This is the or operator in Java. The if statement will be true if at least one condition is true.
+<br>
+<br>
+&emsp;<img src="../Images/DeMorgan2.PNG" alt="" style="width:60%;height:60%;">
+<br>
+<br><strong> 3) ! </strong>
+<br>
+<br>&emsp;This is the not operator. It reverses conditions. 
+<br>
+<br>&emsp;Example:
+<br>
+<br>
+&emsp;<img src="../Images/DeMorgan3.PNG" alt="" style="width:70%;height:70%;">
+<br>
+<br>&emsp;Here are how some common expressions are "reversed" by the not operator.
+<br>&emsp;Take a minute and think about them. They should make mathematical sense. 
+<br>
+<br>&emsp;1) !(c == d) is equivalent to (c != d)
+<br>&emsp;2) !(c != d) is equivalent to (c == d)
+<br>&emsp;3) !(c < d) is equivalent to (c >= d)
+<br>&emsp;4) !(c > d) is equivalent to (c <= d)
+<br>&emsp;5) !(c <= d) is equivalent to (c > d)
+<br>&emsp;6) !(c >= d) is equivalent to (c < d)
+<br>
+<br>
+<strong>Using Those Operators </strong>
+<br>
+You can have as many operators/logical conditions in your 
+if or else if statements as you want. 
+<br>Just don't make logic errors!
+<br>
+<br>
+Example:
+<br>
+<br>
+<img src="../Images/DeMorgan4.PNG" alt="" style="width:70%;height:70%;">
+<br>
+<br>
+<strong>Precedence </strong>
+<br> Just like how there is a precedence with mathamatical operators like * is performed before +, 
+ precedence also exists with Java logical operators!
+<br>
+<br>
+<center>
+<img src="../Images/precedence.PNG" alt="" style="width:60%;height:60%;">
+<br>
+
+<img src="../Images/precedence1.PNG" alt="" style="width:60%;height:60%;">
+<br>
+<br>
+</center>
+<div class="parallax1"></div>
+<br>
+<strong>DeMorgan's Laws</strong>
+<br>DeMorgan's Laws states that:
+<br>
+<br>&emsp;!(A||B) = !A && !B  &#8594; not(a or b) = not a & not b
+<br>&emsp;!(A&&B) = !A || !B &#8594; not(a and b) = not a or not b
+<br>
+<br>
+These "truths" are really fundamental to understanding conditional statements, and should be memorized. 
+<br>
+<br><strong>Logical Operators and Truth Tables</strong>
+<br>
+Now that you have a taste on what conditional statements are, 
+we can introduce a new concept: truth tables. 
+<br>The purpose of 
+a truth table is to help determine whether a complex conditional 
+statement is true (1) or false (0). 
+<br>
+<br>For example, you can use a truth table to prove DeMorgan's Laws:
+<br>&emsp;!(A||B) = !A && !B  
+<br>&emsp;!(A&&B) = !A || !B 
+<br>
+<br>See how the truth table breaks the conditional expressions into 
+"bite sized" pieces so that the end result is easy to calculate. 
+
+<br>
+<img src="../Images/DeMorgan5.PNG" alt="" style="width:98%;height:98%;">
+
+<br>
+<br>
+<i>Note that for A and B initially, every possible combination between 
+truth and false is listed. 
+<br>This is so that all conditions going forth in the 
+truth table can be calculated. 
+<br>You can think that these combinations of 1s and 0s are like a firm "anchor".</i>
+<br>
+<br>
+Truth tables are your tools to help figure out complex conditional statements, 
+so use them! 
+<br>
+<br>
+<strong>Summary: </strong>
+<br>
+&emsp; - &&, if at least one of the 
+two booleans is false, then the whole expression is false. 
+<br>
+&emsp; - ||, if at least one of the two booleans is true, then the whole expression
+ is true. 
+ <br>
+ &emsp; - !, reverses conditions.
+ <br>
+&emsp; - Very important relations between boolean expressions, are reflected within 
+DeMorgan's laws. 
+<br>
+<br>
+
+
+</p>
+<br>
+<br>
+
+<br>
+	<form action="../Unit3WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\Unit3.2Quiz.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Practice</button>
+          </form>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</div>
+<div class="parallax"></div>
+</body>
+</html>

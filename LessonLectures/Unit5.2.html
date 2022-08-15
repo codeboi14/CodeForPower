@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  min-height: 750px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 2000px; /* Used to enable scrolling */
+  background: linear-gradient(55deg, #c2f0c2 5%, #cce6ff 61%, #f2f2f2 95%);
+  
+  
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px"; "padding-right:25px">
+<strong><bold>Unit 5.2: Populating Arrays & For Each Loop</bold></strong> 
+
+<div style="font-size:2vw;">
+<br>
+<strong>How Are Arrays Populated?</strong>
+<br>
+<br>&emsp;&emsp;1) You can populate an array with literals (like we learned previously)
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;int[] myArray = {0,1,2};
+<br>
+<br>&emsp;&emsp;2) You can populate an array with loops (typically for loop).
+<br>
+<br>&emsp;&emsp;&emsp;&emsp;Populating an array with a for loop is better 
+than just listing what elements it contains. 
+<br>&emsp;&emsp;&emsp;&emsp;Here's why: consider declaring an array 
+holding int values from 0 to 500 inclusive. 
+<br>&emsp;&emsp;&emsp;&emsp;Yea...good luck writing out 501 integers 
+with the listing literals method. Using a loop will be much easier. 
+<br>
+<br>
+<center><img src="../Images/array1.PNG" alt="" style="width:850px;height:190px;"> </center>
+<br>
+<br>
+<div class="parallax1"></div>
+<br>
+<strong>For-Each Loop (Enhanced For Loop)</strong>
+<br>
+The for-each loop, or enhanced for loop,
+is simply another way to write the traditional for loop but under  
+more specific circumstances. The enhanced for loop is specifically 
+made to loop through collections of data, like an array. 
+<br>
+<br><strong>&emsp;Syntax:  </strong>
+<br>
+<pre>
+&emsp;&emsp;&emsp;&emsp;for (initialized LCV declaration : arrayName){
+   &emsp;&emsp;&emsp;&emsp;&emsp; //code block
+&emsp;&emsp;&emsp;&emsp;}
+</pre>
+<strong>&emsp;Example:</strong>
+<pre>
+&emsp;&emsp;&emsp;&emsp;String[ ] colors = {"blue", "green", "yellow"};
+&emsp;&emsp;&emsp;&emsp;for (String i : colors) {
+    &emsp;&emsp;&emsp;&emsp;&emsp;System.out.print(i + " ");
+&emsp;&emsp;&emsp;&emsp;} 
+&emsp;&emsp;&emsp;&emsp;//outputs: blue green yellow
+</pre>
+<strong>Breakdown: </strong>
+<br>&emsp;1) The String "i" holds elements of the colors array. 
+<br>&emsp;&emsp;Instead of using a traditional for loop to call elements like: colors[i], 
+you just write "i" in the for each loop. 
+<br>
+&emsp;2) The for each loop can be read like this:
+<br>&emsp;&emsp; <strong>for each</strong> String element called 
+<strong>i</strong> -as in the <strong>i</strong>ndex of the array- in colors, print out 
+the value of <strong>i</strong>. 
+<br>
+<br><strong>Comparison Between The For & For-Each Loop:</strong>
+<br>When looping through an array, the for-each loop is much shorter than a for-loop. 
+<br>Given an array called colors,
+lets say we want to write a loop that prints out all the elements of the array.
+<br>
+<br>
+Given: String[ ] colors = {"blue", "green", "yellow"};
+<br>
+<br>
+<strong>for-each (enhanced for loop)</strong>
+<pre>
+	for (String i : colors) 
+	{
+		System.out.print(i + " ");
+	}
+</pre>
+<strong>for-loop</strong>
+<pre>
+	for(int i = 0; i < colors.length; i++)
+	{
+		System.out.print(colors[i] + " ");
+	}
+</pre>
+The two loops all accomplish the same thing, outputting: blue green yellow
+<br>
+<br>
+<br>
+<strong>Final Thing To Know About Enhanced For Loops:</strong>
+<br>
+<br>&emsp;1) You CANNOT use the enhanced for loop for non-objects in Java. 
+<br>
+<br>&emsp;2) Because you don't write any increment/decrement statement
+in the enhanced for loop, 
+<br>&emsp;&emsp;it can ONLY start from the beginning of an array and go to the end. 
+<br>&emsp;&emsp;On the other hand, traditional for loops can go both ways. 
+</i>
+</p>
+<br>
+<br>
+<br>
+<br>
+	<form action="../Unit5WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\Unit5.1Quiz.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Practice</button>
+          </form>
+</div>
+
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</div>
+<div class="parallax"></div>
+</body>
+</html>

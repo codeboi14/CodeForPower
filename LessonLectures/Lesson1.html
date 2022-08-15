@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 1500px; /* Used to enable scrolling */
+
+  background-color: #ffb3b3; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#e6f2ff 10%, #ffe6cc 85%, #ffb3b3 110%);
+  
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 2.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px">
+<strong><bold>LESSON 1: PRIMITIVE DATA TYPES:</bold></strong> 
+
+
+<div style="font-size:2vw;">
+<br><strong>What Is Data? </strong>
+<br>Data is information, such as numbers, conditional statements (yes, no), etc. For computers to process 
+such information, data types and data structures exist. 
+<br>(NOTE* computers don't <i>understand</i> data. They just have access to the ones you store.)
+
+<br>
+<br>
+<strong> Primitive Data Types: </strong>
+<br>There are 8 primitive data types that are predetermined and built into Java. 
+These data types are fundamental to coding, and  have a predetermined memory size allocated for their storage. 
+Listed below are the 8 primitive data types in Java. The ones circled are the only ones you need to know.
+<br><i>NOTE: floating-point types should never be used to store exact values due to small accuracy errors.</i>
+<br>
+<img src="../Images/PrimitiveTypeChart.PNG" alt="hi" style="width:1250px;height:1000px;">
+<br>
+<br>
+<strong>Syntax For Primitive Data Declarations</strong>
+<br>(primitive type) dataName = (data that the type can store); 
+<br>
+<br>&emsp;Example: int JavaIsTheBest = 1;
+<br>
+<br>&emsp;Recap: primitive types = int, double, boolean, byte, short, long & float
+<br><i>
+<br> &emsp;Note* You can declare a variable, and assign it to an value later.
+<br> &emsp;Example:
+<br> &emsp;&emsp;&emsp;&emsp;int x;
+<br> &emsp;&emsp;&emsp;&emsp;x = 1;
+</i>
+<br>
+<br> <strong> Printing Statements In Java </strong>
+<br>Prehaps the first thing you will program is printing something in Java. Printing is extremely 
+useful since you can see your code's output.
+To print, you must write out the statement below word for word:
+<br>
+<br>&emsp;System.out.print(your statment goes here);
+<br>
+<br>What gets printed is what's inside the parenthesis. 
+<br>
+To print text, put quotes around your statement:
+<br>
+<br>&emsp;System.out.print("My statement"); <i>This simply outputs: My statement </i>
+<br>
+<br><i>Why Do We Print Like This? Just memorize this statement for now. We will explain why later. </i>
+<br>
+<br>
+<div class="parallax1"></div>
+<br>
+<br><strong>int (integer type) </strong>
+<br>Ints are one of the most frequently used primitive data types. It stores an integer (such as 2,100,467).
+You cannot store ints over their upper and lower boundaries, as this will cause an overflow error.
+<br>
+<br><i>NOTE: the int can overflow should you perform arithmetic with integers that store the largest or smallest 
+numbers that the int can store. For example, if you decide to assign an int to a the value 2,147,483,647 + 1,
+it will overflow, since the new number is larger than the max possible value that the int can store.
+Furthermore, ints can have underscores between its digits for readability, like 99_012.</i>
+</div>
+
+
+
+<div style="font-size:2vw;">
+<br>
+<strong>double (floating-point type) </strong>
+<br>Doubles are another frequent data type that Java programmers use to store decimals (3.1415926). Typically, 
+any decimal will be expressed as a double instead of a float, as memory size isn't a problem that concerns 
+modern day computers. Doubles are more powerful than ints as they can store larger numbers, and ints aswell! 
+In doing so, the integer 
+stored will be promoted to a double through the appending of zeros after the units digit like: 32 &#8594; 32.0
+<br> Doing calcuations with a double will result in an extremely small accuracy error, like: 32.0 + 0.0 = 32.0000000000000001. 
+Therefore, doubles should never be used to store precise values. 
+
+<br><i>
+<br>NOTE: Just like ints, doubles can overflow 
+should you perform arithmetic that exceeds the double's largest and
+smallest values.</i>
+<br>
+<br><strong>char (character type) </strong>
+<br>Characters are another frequently used primitive data type that programmers use in Java. Char data can store all the
+letters of the alphabet in either lowercase or uppercase (a-z, A-Z), along with ASCII values (more on ASCII
+later). 
+The syntax for char is a bit special, as it requires single quotes that encase the char data.
+<br>
+<br>Example: char myCharName = 'a';
+<br>
+<br><i>NOTE: Character data types rely on the ASCII system and therefore, can be incremented and decremented like an int. Conversions between 
+chars and ints are possible, and will be discussed in further detail later.</i>
+<br>
+<br>
+<br><strong>boolean (true or false) </strong>
+<br>Booleans can only store true and false values, which can be expressed by 1 (meaning true) and 0, (meaning false). 
+Booleans are mostly used for logical decision making. For example, <i>if</i> "food is yummy" = true, then I will eat.
+<br>
+<br>
+<strong>Naming Convention for Variables: </strong>
+<br>All of your data types(variables) need a name. Why? Well, Java is asking you why do you have a name? 
+The reason why is so people can <i> call </i> you to send information (like, hey! Let's go get icecream!).
+<br>
+<br>
+<i>NOTE: names are also called identifiers. Java allows you to use names to call(obtain) data 
+stored in the memory of the 
+computer, instead of a nonsensical memory address. This makes your job a lot easier. </i>
+<br>
+<br> 1) Names MUST begin with a letter or the symbols: "_" & "$". 
+<br>   After beggining with a letter, you may include numbers in your name.
+<br>
+<br>&emsp; Example) int x123_underscoresAreAllowed = 0;
+<br>
+<br>2) Variable names must not contain special characters like * or spaces.
+<br>
+<br>3) An identifier(variable name) <i>should</i> have a logical name, and start 
+with a lowercase letter (this doesn't affect the code though).
+<br>   <br> &emsp; Example) Don't name a variable:
+<br>       &emsp; &emsp; &emsp;&emsp;&emsp;int bogusNonsense = 0;
+<br>
+<br>4) Use camelCase with each subsequent word for readability. <i>First letter of the subsequent word begins with a capital letter.</i>
+<br> 
+<br>	&emsp; Example) int camelCaseIsCool = 0; 
+			
+<br>
+
+<br><strong> Sizes of Data </strong>
+<br>Depending on the type and size of a data type, different amounts of memory are needed to store them. The most basic memory storage is the bit. 
+Below is a table that lists data sizes used for computer storage from smallest to largest. Note, most laptop 
+memory sizes reach only to one terabyte (as of 2021).
+<br>
+<img src="../Images/DataPic.PNG" alt="hi" style="width:1250px;height:850px;">
+<br>
+<br>
+</div>
+
+
+</p>
+
+<br>
+
+	<form action="../Lesson1WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\preQuiz.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Practice</button>
+          </form>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+<div class="parallax"></div>
+</body>
+</html>

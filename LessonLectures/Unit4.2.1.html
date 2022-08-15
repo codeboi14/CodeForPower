@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 2000px; /* Used to enable scrolling */
+  background: linear-gradient(55deg, #6699cc 0%, #cce6ff 51%, #f2f2f2 85%);
+  
+  
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px"; "padding-right:25px">
+<strong><bold>Unit 4.1: For Loop</bold></strong> 
+
+
+<div style="font-size:2vw;">
+<br>
+<br>
+The while loop
+The while loop is the most general of the three types of loops in Java,
+ and it is declared with the keyword “while”. ALL loops in Java can be 
+ written into a while loop. Like the for loop, the while loop continues 
+ a repetitive action until a specific boolean condition is reached. 
+ You should use the while loop when you don’t know how many times something will loop. 
+
+<br>
+<br>
+Syntax:  
+<pre>
+while (boolean condition check) {
+    //code
+    //increment/decrement
+}
+</pre>
+Example:
+<br>
+<img src="../Images/while.PNG" alt="" style="width:800px;height:700px;"> 
+<br>
+Note that the condition update statement is located within the while loop statement
+(the only place it can be in a while loop). The above example can be rewritten into 
+a for loop, but NOT into an enhanced for loop. The while loop above can be written in a for
+ loop like this:
+<br>
+<img src="../Images/while2.PNG" alt="" style="width:700px;height:350px;"> 
+<br>
+Remember that the ability to identify the 3 C’s and 
+use them in the different structures of loops in Java is 
+crucial! This is a fundamental requirement 
+to mastering loops, and loops are a big chunk 
+of the AP Computer Science A exam! 
+<br>
+<br>
+<div class="parallax1"></div>
+<br>
+<br>
+<strong>The do-while loop </strong>
+<br>The do-while loop follows a slightly different execution 
+sequence than the while loop. The do-while loop checks the 
+boolean condition AFTER executing its code block, contrasting 
+the for and while loop, which checks the boolean condition BEFORE. 
+It is because of this that do-while loops are guaranteed to execute at 
+least once. The keywords “do” and “while” are necessary to declare the do-while loop. 
+<br>
+<br>
+Syntax:
+<pre>
+do {
+    //code 
+    //increment/decrement
+}
+while (condition, boolean);
+</pre>
+Example
+<br>
+<img src="../Images/while3.PNG" alt="" style="width:600px;height:530px;"> 
+<br>
+<br>
+<strong>Do-while loop execution sequence</strong>
+<br> 1) Execute code within the “do” 
+<br> 2) Check the condition (LCV is updated inside “do”)
+<br>- (if it satisfies the boolean condition in the “while” statement (true) )→ Go back to #1
+<br>- (if false) → Break the loop
+<br>
+<br>
+Do-while loops are also called Exit Control Loops, as they exit loops 
+to check for the control (use see this with the separate code (inside “do”) 
+and boolean condition statement (inside “while)). Lastly, the do-while loop 
+can technically be converted into a while and for loop if you want. Below 
+is its conversion into a while and for loop:
+
+<br>
+<br>
+<strong>Do-While to While Loop Conversion </strong>
+<br>
+<br>
+<img src="../Images/while4.PNG" alt="" style="width:800px;height:700px;"> 
+<br>
+<br>
+<strong>Do-While to For Loop Conversion</strong>
+<br>
+<br>
+<img src="../Images/while5.PNG" alt="" style="width:800px;height:650px;">
+<br>
+</p>
+<div class="parallax"></div>
+
+<div style="height:700px;background-color:;font-size:36px">
+<br>
+	<form action="../Unit4WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:2px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\Unit4.1Quiz.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:2px;">Practice</button>
+          </form>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</body>
+</html>

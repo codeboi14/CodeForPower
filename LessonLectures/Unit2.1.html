@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/image1.PNG");
+
+  /* Set a specific height */
+  min-height: 700px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 4000px; /* Used to enable scrolling */
+  background-color: #ffb3b3; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#e6f2ff 10%, #ffe6cc 85%, #ffe6e6 110%);
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px"; style="padding-right:25px">
+<strong><bold>Unit 2.1: Classes</bold></strong> 
+
+
+<div style="font-size:2vw;">
+<br><strong>Some Advice:</strong>
+<br>Unit 2 explains the broad view on what Java is, and how it is organized. 
+Starting off, a ton of new concepts and vocabulary will be thrown at you. 
+However, just read through it and put the basic ideas in the back of your mind. 
+Once you start practicing, everything will click together!
+<i>NOTE: Computer science is not a course that you can memorize your way through! 
+Understanding can truly come if you practice, especially with the crucial concepts
+this unit will embark on! </i>
+
+</div>
+<div style="font-size:2vw;">
+<br><strong>Digging in for the Long Haul: </strong>
+<br>Unit 2 is the longest and most difficult unit of the whole AP Computer Science A course. 
+However, once you finish this unit, all other units will be but small bumps in the road to success. 
+<br>
+<hr style="height:3px;color:DarkSeaGreen;background-color:DarkSeaGreen">
+<br>
+<i>Just a heads up if you don't know already- the words attributes & variables refer to the same thing,
+so they will be used interchangeably. 
+</i>
+<br>
+<br>
+<strong>JAVA OOP:</strong>
+<br>OOP stands for object-oriented programming. 
+This type of programming revolves around creating objects 
+that may contain data or methods (more on objects & methods below).
+<br>
+<br>Benefits of OOP programming:
+
+ <br> &emsp;   1) Easier to debug (finding logic errors in your code)
+<br>	&emsp;&emsp;	<i>Because of their debugging superiority, OOP languages like Java, C++, etc. 
+<br> &emsp;&emsp; are commonly used 
+		in competitive programming and coding software for real-world apps.</i>
+
+   <br> &emsp; 2) Code can be reused, leading to shorter development time and shorter code. 
+	 
+    <br> &emsp; 3) OOP languages have a very clear structure when programming. 
+
+</div>
+</p>
+<div class="parallax1"></div>
+<p>
+<div style="font-size:2vw;">
+<strong>What Are Classes & Objects?</strong>
+<br>Classes & objects are two main aspects of OOP programming. 
+Here is a simplified look on what their concepts are. 
+<br>
+<br>
+<img src="../Images/Class&Object.PNG" alt="" style="width:75%;height:75%;">
+<br>See how classes are templates for objects, and that objects are INSTANCES of the class. 
+<br>
+<i>
+<br>Note* when an object is created, it inherits all of the variables & methods of that class
+(more on inheritance and methods later).</i>
+
+<br>
+<br><strong>Java Classes</strong>
+<br>
+Classes are the big picture of java. A class is a group of statements assembled into a single
+ unit. 
+<br>It is the blueprint of the object, and is stored in a file. 
+<br>
+<br>
+Structure of A Class: 
+<br>
+<br>
+&emsp;public class HelloWorld
+<br>&emsp;{
+<br> &emsp;&emsp;&emsp;   //code not shown
+<br>&emsp;}
+<br>
+<br>
+<strong>Naming Classes:</strong>
+<pre>
+	1) All classes should begin with a capital letter. 
+	   This is proper naming convention.
+	2) You must follow the same rules when naming 
+	   variables when you name classes. 
+	   <i>Names must start with a letter & not a number, 
+	   they should also not contain any special characters, spaces, etc. </i>
+</pre>
+<i>NOTE: code is always executed top-down in Java. So line 1 is performed first, then line 2, etc. </i>
+</div>
+
+
+
+<div style="font-size:2vw;">
+<br>
+<strong>Think of Classes Like This:</strong>
+<br>
+
+Assume that we created a math class. What does the math class do?
+Well, the math class can have <i>methods</i> that contain specific code 
+for doing square root, exponent, etc. The class doesn't really do
+ anything, it just organizes related code, like mathematical operations,
+ so it can be easily used in other other programs & classes. 
+<br>
+<br>
+<img src="../Images/Class.PNG" alt="" style="width:1050px;height:500px;">
+<br>
+<br>
+<br><strong>Terminology:</strong>
+<br>
+<br>Driver Class: A driver class is created to control a large program, as it drives the program through its general structure.
+<br>
+<br>Object Class: This is like the "guts" of the methods that the driver class calls. It defines what the object has and does. 
+<br>
+<br>Think about driver & object classes this way: 
+<br>&emsp;When driving a car, the "driver" operates the pedal, 
+which makes the car do something, like moving. 
+<br>&emsp;What happens under
+ the hood when you press the pedal is what the object class does.
+<br>
+<br><strong>Abstraction</strong>
+<br> Abstraction is knowing what something does, but not how it does it. 
+For example, you know that your brain can tell the difference between
+ a bee and a three. However, you don't know <i>how</i> it knows the difference, 
+ since you just know that creature <i>is</i> a bee, and you just know that symbol <i>is </i>
+ a three. Your thinking is <i>abstract</i>.
+<br>
+<br>
+<br>
+<br>
+</div>
+
+
+</p>
+
+<div>
+	<form action="../Unit2WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\Unit2.1Quiz.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Practice</button>
+          </form>
+		  </div>
+		  </div>
+		  <div class="parallax"></div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</body>
+</html>

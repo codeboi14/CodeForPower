@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 4000px; /* Used to enable scrolling */
+  background-color: #ffb3b3; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#e6f2ff 10%, #ffe6cc 85%, #ffe6e6 110%);
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px"; style="padding-right:25px">
+<strong><bold>Unit 2.3.2: Constructors</bold></strong> 
+<div style="font-size:2vw;">
+<br>
+A constructor is a special method that initializes objects. 
+<br>It is called when the object of a class is created, and used to set values for object attributes. 
+<br>
+<br><strong>How To Create An Constructor </strong>
+<br>&emsp;1) The constructor name MUST match the class name
+<br>&emsp;2) The constructor MUST not have a return type (like void etc.)
+<br>&emsp;3) If you don't create a constructor, Java creates a default one for you.
+<br>
+&emsp;&emsp;A constructor can take in as many parameters as you want. 
+<br>
+<br>&emsp;Example:
+<br> &emsp;&emsp;<img src="../Images/Constructors.PNG" alt="" style="width:75%;height:75%;">
+<br>
+<br><i>NOTE: the variables in your class should be declared as private and not public. 
+You don't want other people who use your class to change sensible data!</i>
+<br>
+<br>
+<strong>Terminology</strong>: 
+<br>
+&emsp;	1) Default constructor
+<br>
+&emsp;&emsp;A constructor with NO parameters is called the default constructor. 
+<br>
+<br>
+<div class="parallax1"></div>
+<br>
+<strong> Variable Scope</strong>
+<br>
+Everything in Java has a scope, meaning when it is in the memory. 
+If a variable is out of scope, it is out of the computer's memory, 
+and you can't use it. 
+<br>
+<br>
+<strong>Scope in Methods, Classes & Constructors </strong>
+<br>The scope for variables in methods & classes are inside the curly braces {}. 
+They are also called "local variables".
+<br>
+<br>Example: If you have a local variable in a method, 
+you can't use it outside of the method, since its scope is only inside that method. 
+(This same logic applies to classes as well).
+<br>
+<br> <img src="../Images/Scope.PNG" alt="" style="width:50%;height:50%;">
+<br>
+<br>
+<strong>Scope In Loops</strong>
+<br>
+Loops also have a scope.
+
+Don't worry if you don't understand what loops are.
+ <br>Just look at how the SCOPE of its variables are deternmined by the curly braces.
+
+<br>
+<br> <img src="../Images/Scope1.PNG" alt="" style="width:60%;height:60%;">
+
+<br>
+<br>
+</p>
+
+<br>
+<br>
+<br>
+	<form action="../Unit2WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\Unit2.3Quiz.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Practice</button>
+          </form>
+</div>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+<div class="parallax"></div>
+</body>
+</html>

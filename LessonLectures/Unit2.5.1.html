@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 2000px; /* Used to enable scrolling */
+  background-color: #ffb3b3; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#e6f2ff 10%, #ffe6cc 85%, #ffe6e6 100%);
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="padding-left:20px"; style="padding-right:25px">
+<div style="font-size:4vw;">
+<strong><bold>Unit 2.5.1: Inheritance</bold></strong> 
+</div>
+
+<div style="font-size:2vw;">
+<br><strong>What is inheritance?</strong>
+<br>
+Inheritance is a very powerful tool in OOP (Object Oriented Programming),
+ and is extensively used within Java programs. 
+The idea behind inheritance is a subclass <i>inheriting</i> the methods and fields of 
+its parent class (superclass). 
+<br>
+<br>
+<strong>So...why is inheritance so important?</strong>
+<br>
+Since inheritance allows classes to obtain the methods and attributes of another class, development
+time can be drastically reduced. Furthermore, your code will be organized better. Here is an example why:
+<br>
+<br>
+A superclass is more general, like a vechicle. 
+<br>A superclass can have subclasses, like SUV, sedan, van, etc.
+<br>
+<br>Inheritance applies here as SUVs, sedans, and vans all have qualities of a vechicle, 
+such as having tires, a engine, etc.
+Thus, we don't have to reprogram those traits that all vechicles have to those more specific subclasses.
+We can just make minor adjustments (polymorphism) to fit more specific needs. 
+<br>
+<br><strong>How does a class inherit another class?</strong>
+<br>
+To inherit, use the "extends" keyword. 
+<br>
+<br>Example:
+<br>
+<br>
+We will create a subclass "Dog" that inherits the superclass "Animal".
+<br>
+<pre>
+	<strong>class</strong> Dog <strong>extends</strong> Animal 
+	{
+		//code
+	}
+</pre>
+<i>NOTE: a subclass can only inherit one superclass through the "extends" keyword. 
+Furthermore, inheritance can be blocked
+ depending on the superclass's access modifier (more on this later). </i>
+ <br>
+ <br>
+<strong>"Is-a" relationship</strong>
+<br>
+Superclasses are
+ general templates for subclasses. Therefore, a subclass "IS-A" superclass, and this is ALWAYS
+ true.
+ <br>In context of our example above, 
+ a dog "IS-AN" animal. However, an animal does not necessarily have 
+ to be a dog. 
+ <br>We can use this relationship to deternmine whether inheritance between two classes work.
+For example, we have a superclass, YummyFoods, and a subclass, Cookies. Is the following declaration valid?
+<br>
+<br>
+&emsp;Cookies myCookies = new YummyFoods();
+<br>
+<br>Let's see if this satisfies the "IS-A" relationship! Look from RIGHT TO LEFT. Well, YummyFoods aren't ALWAYS
+Cookies. Thus, this delcaration is not valid. 
+<br>
+<br><strong>Which access modifier allows inheritance? </strong>
+<br>
+Only public, protected, and the default access modifier premit inheritance.
+ <br>Classes with the access modifier of 
+ private or final can never be inherited by a subclass. 
+<br>
+<br><strong>Another Inheritance Example: </strong>
+<br>
+We have a cookie class telling a secret process on how to make cookies! 
+However, we want different "toppings" on our cookie, like chocolate chip, chunky white chocolate, etc. 
+<br>
+<br>
+Thus, we can create a superclass called Cookie that tells how to make different cookies.
+We can then create subclasses that inherit the Cookie class to make small 
+additional adjustments, like putting on chocolate chips for our luscious chocolate 
+chip cookies. 
+<br>
+<br> <img src="../Images/Inheritance.PNG" alt="" style="width:95%;height:95%;">
+<br>
+<div class="parallax1"></div>
+<br><strong>The "super" keyword</strong>
+<br>The first statement of a subclass's constructor must include the statement: super().
+<br>The purpose of super is to invoke a constructor in the parent class to initalize data.
+<br>To call a specific constructor of the superclass with super, put the arguments of the 
+parent
+ constructor into
+super. 
+<br>Lets say you have a parent class constructor with the signature: public Point(int x, int y). 
+<br>To call that constructor with super in the subclass, do: super(x, y). 
+<br>
+<br><i>NOTE: if you don't write super(), Java does it for you by calling the default constructor
+in the superclass. </i>
+<br>
+<br>
+<strong>Casting with inheritance</strong>
+<br>You can cast between subclasses objects and superclasses objects in inheritance. When you cast,
+you are just labeling the object differently. 
+Note that all classes are a subclass of the Object class, and that casting in inheritance is 
+different than casting with primitives. We will use the relationship of the classes in the image below
+in our casting examples.
+<br>
+<br> <center><img src="../Images/Casting.PNG" alt="" style="width:700px;height:520px;"></center>
+<br><strong>Upcasting</strong>
+<br>You can upcast a subclass object to be treated like a superclass object. For example,
+when you upcast Ferrari to Car, the Ferrari object doesn't stop being a Ferrari, but it WILL NOT have
+the properties of a Ferrari. It will just be a plain old car. 
+<br>
+<br>&emsp;Code:
+
+<br>&emsp;Car myCar = (Car)new Ferrari();
+<br>
+<br><i>NOTE: you can only upcast if the relationship ALWAYS holds up. For example, you can upcast
+a Ferrari to a car, since a Ferrari is always a car. However, you can't cast a Ferrari to a Tesla,
+as a Ferrari isn't a Tesla. Furthermore, upcasting is done atomatically between subclasses and superclasses,
+as Java knows that a subclass can always be a superclass.</i>
+<br>
+<br><strong>Downcasting</strong>
+<br>Unlike upcasting, downcasting must be done manually since it might fail. A superclass might not always be
+a specific subclass. For example, you can downcast a car to a Tesla. But, Java doesn't do this for you
+since a car isn't always a Tesla. 
+<br>
+<br>
+&emsp;Code:
+
+<br>&emsp;Tesla myCar = (Tesla) new Car();
+<br>
+<br><strong>Summary on Inheritance:</strong>
+<br>&emsp;1) When a subclass inherits the superclass, it also inherits all of the attributes and methods. 
+<br>&emsp;2) A subclass(child) CAN inherit all of the methods & attributes of the superclass(parent).
+<br>
+&emsp;3) A superclass(parent) CANNOT inherit the methods & attributes of its subclass(child). 
+<br>
+<br>
+<i>If you think about it, this makes sense. A parent passes his family
+ wealthy onto his children. 
+ <br>However, his children won't pass their wealth onto their parent. </i>
+</p>
+
+<br>
+<br>
+<br>
+	<form action="../Unit2WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="Unit2.5.2.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Polymorphism</button>
+          </form>
+</div>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+<div class="parallax"></div>
+</body>
+</html>

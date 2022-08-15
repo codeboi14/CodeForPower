@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  min-height: 740px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 1500px; /* Used to enable scrolling */
+   background-color: #ebfaeb; /* For browsers that do not support gradients */
+
+  background-image: linear-gradient(#cceeff 10%, #b3d1ff 85%, #b3e6b3 115%);
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px"; "padding-right:25px">
+<strong><bold>Unit 6.6: Merge Sort</bold></strong> 
+
+<br>
+<div style="font-size:2vw;">
+<br>
+<strong>Merge Sort: </strong>
+<br>The merge sort is probably the most challenging algorithm that 
+you need to know for the AP Computer Science A exam. Merge sort runs 
+in O(NlogN) time as it splits a data set into two data sets (logN time) 
+and merges the two sorted sets together in linear time (N time). 
+<br>
+<br>
+The merge sort is a divide and conquer styled algorithm, where each data set is split into groups of 
+two until it is split into its most basic elements (arrays of size 1). From there, each small piece is
+ merged together in order. Below is a diagram illustrating this concept. 
+ Just analyze the LOGIC
+ and big picture behind merge sort. Don't worry about coding it for now.
+<br>
+<br>
+Let's say you want to sort the following array with merge sort:
+<br>
+<br>
+<img src="../Images/MergeSort.PNG" alt="" style="width:1000px;height:130px;">
+<br>
+<br>
+<strong>
+Part 1 (Splitting Into Atomic Components)</strong>
+<br>
+First, split the array into each individual element. 
+<br>
+<br>
+<img src="../Images/Merge1.PNG" alt="" style="width:1000px;height:100px;">
+<br>
+<br>
+<strong>Part 2 (Merging And Sorting)</strong>
+<br>
+<br>
+
+<img src="../Images/Merge.PNG" alt="" style="width:70%;height:70%;">
+<br>
+<br>
+Looking at the picture above, you probably understand the LOGIC behind merge sort now. However, you might be wondering, how do I sort the elements in order as I merge? This is actually pretty simple, just compare the first element in each piece, and sort accordingly:
+<br>
+<br>
+<img src="../Images/Merge2.PNG" alt="" style="width:80%;height:80%;">
+<br>
+<br>
+<img src="../Images/MergeSort10.PNG" alt="" style="width:80%;height:80%;">
+<br>
+<br>
+Continuing this merging and sorting process until you have your entire array 
+"together".Note that the merge sort relies heavily on method recursion, 
+as its process or merging is REPEATED over and over. 
+Make sure you understand the method recursion concept, 
+which is talked about in the next unit. THE AP EXAM WILL NEVER MAKE YOU PROGRAM YOUR OWN MERGE SORT ALGORITHM, AS IT IS REALLY COMPLEX. HOWEVER, YOU WILL NEED TO KNOW HOW TO INTERPRET A MERGE SORT!!!
+<br>
+<br>
+<i> Note that this algorithm is quite lengthy. 
+Therefore, reread it as many times as you need until you firmly understand the logic behind the code. 
+</i>
+<br>
+<br>
+<img src="../Images/MergeSort1.PNG" alt="" style="width:60%;height:60%;">
+<img src="../Images/MergeSort2.PNG" alt="" style="width:60%;height:60%;">
+<img src="../Images/MergeSort3.PNG" alt="" style="width:60%;height:60%;">
+
+</p>
+<br>
+<br>
+<br>
+	<form action="../Unit6WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\Unit6.5Quiz.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Practice</button>
+          </form>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</div>
+<div class="parallax"></div>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  min-height: 750px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 2000px; /* Used to enable scrolling */
+  background: linear-gradient(55deg, #6699cc 0%, #cce6ff 51%, #f2f2f2 85%);
+  
+  
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px"; "padding-right:25px">
+<strong>&ensp;Unit 4.3: Nested Loops</strong> 
+
+
+<div style="font-size:2vw;">
+<br> 
+<div style="padding-left:20px"; "padding-right:25px">
+Nested loops are loops inside of loops, and to get 
+to the innermost nested loop, one must first go through 
+all the outermost nested loops. Note that all loops (while, for & do-while) can be nested. 
+<br>
+<br>
+Nested loops can be quite confusing logically, as you have so many loops to worry about. However, 
+if you carefully trace the loop step by step, you will soon see a pattern! 
+<br>
+<hr>
+Read the following example carefully. 
+If you don't understand the logic behind it,
+ plug it into Eclipse and test it for yourself. 
+ Remember that coding is a hands on, and one will 
+ never master it without actually trying it out!
+<br>
+<br>
+Nested Loop Example I. 
+
+<br>
+<br>
+&emsp;<img src="../Images/nested.PNG" alt="" style="width:50%;height:50%;"> 
+<br>
+<br><strong>Tracing The Loop: </strong>
+<br>Trace the loop from the inside out.
+<br>
+<br>&emsp;&emsp;1) Loop3's code block will print "*".
+ The loop continues this process for 4 times. 
+<br>
+<br>&emsp;&emsp;2) Loop2 has a code block including loop 3 and a 
+println statement with the symbol "!". 
+<br>&emsp;&emsp;&emsp;After loop 3 finishes in its entirety, the "!" 
+is printed at the end of loop3's "****". 
+<br>&emsp;&emsp;&emsp;Note that loop2 continues for 3 times. 
+<br>
+<br>&emsp;&emsp;3) Loop 1 has a code block containing loop2 and a 
+println statement printing "-----".
+<br>&emsp;&emsp;&emsp;After loop2 finishes in its entirety, the "-----"
+ statement is printed underneath.
+<br>&emsp;&emsp;&emsp;The loop continues this process for 2 times. 
+After all this finishes, we arrive at our output. 
+<br>
+<br>
+<strong>The Big Takeaway: </strong>
+<br>
+In nested loops, the innerloop in its entirety is one code segment of the outer loop, 
+which will repeat its code block for generically, n, times. 
+Because of this, the number of iterations can be quite lengthy. 
+However, you should see a pattern form after a few passes. 
+<br>
+<br>
+&emsp;<img src="../Images/Takeout.PNG" alt="" style="width:50%;height:50%;">
+<br>
+<br>
+<strong>Your Turn!
+What will the following print? </strong>
+<br>
+<br>
+&emsp;<img src="../Images/nested1.PNG" alt="" style="width:50%;height:50%;">
+<br>
+<br>
+This will output: 
+&emsp;&emsp;<br>*****
+&emsp;&emsp;<br>****
+&emsp;&emsp;<br>***
+&emsp;&emsp;<br>**
+&emsp;&emsp;<br>*
+<br>
+<br><strong>Tracing The Loop: </strong>
+<br>
+ Like the previous example, trace the loop from the inside out. 
+ <br>
+<br>&emsp;&emsp;1) The inner loop will have its iterations decrease through every loop. 
+First, it will print "*" 5 times. 
+<br>&emsp;&emsp;2) The outer 
+loop finishes its code segment, and is updated by one, so i = 1. 
+<br>&emsp;&emsp;&emsp;The j value in the second loop changes by: 
+5 - i = 4, so the loop iterates 4 times, printing "*" 4 times.
+<br>&emsp;&emsp;3) The same logic keeps repeating until j goes to 1, 
+and then, the loop terminates.
+ <br>&emsp;&emsp;&emsp;Hence, this reverse right triangle like shape is printed. 
+<br>
+<br>
+Summary: nested loops are complex, LOGIC questions that require "critical-thinking". 
+
+<br>
+</p>
+
+<br>
+<br>
+<br>
+	<form action="../Unit4WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="Unit4.3.1.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Practice</button>
+          </form>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</div>
+</div>
+<div class="parallax"></div>
+</body>
+</html>

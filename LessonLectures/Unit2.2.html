@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/image2.PNG");
+
+  /* Set a specific height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 4000px; /* Used to enable scrolling */
+  background-color: #ffb3b3; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#e6f2ff 10%, #ffe6cc 85%, #ffe6e6 110%);
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px"; style="padding-right:25px">
+<strong><bold>Unit 2.2: Objects</bold></strong> 
+
+
+<div style="font-size:2vw;">
+<br>Java is OBJECT-oriented programming, so you can probably tell how important objects are. 
+An object is an instance of the class, which can contain attributes and methods (functions). 
+It is initialized with the "new" keyword, which invokes a special method called a "constructor". 
+<br>
+<br>
+To create an object, specify the class name, the name you want to give your object,
+ and the keyword new. 
+
+<br>
+<br>
+&emsp;Example:
+<br>
+&emsp;&emsp;&emsp;Scanner myScanner = new Scanner(System.in);
+<br>
+<br>&emsp;Breakdown: 
+<br>&emsp;&emsp;1) class name: Scanner
+<br>&emsp;&emsp;2) object's name: myScanner
+<br>&emsp;&emsp;3) = (assignment symbol)
+<br>&emsp;&emsp;4) new keyword
+<br>&emsp;&emsp;5) class name: Scanner
+<br>&emsp;&emsp;6) parameters (whats inside the parenthesis): System.in
+<br>		
+<br>	
+(You will learn more about parameters in our methods chapter). 
+<br>
+<br><i>NOTE: You can have as many objects as your heart desires in your program. </i>
+<br>
+
+<br><strong>What Are Objects Used For?</strong>
+<br>Objects are used to get numerous things done.
+<br>
+<br>Here is an example on using objects:
+
+<br>
+<img src="../Images/Objects.PNG" alt="" style="width:50%;height:50%;">
+<br>
+<br> What this code does is read in user input of two numbers, x & y, and adds them together. 
+<br>
+<br><img src="../Images/Console.PNG" alt="" style="width:35%;height:35%;">
+
+<br>
+<br><strong>Object Reference (Important Concept) </strong>
+<br>
+Since a object takes up a lot of memory space, a reference 
+to the object and not the object itself is stored in the memory. 
+This is unlike primitive data types, where the actual value and
+not its address in the memory is stored. 
+<br>
+<br>&emsp;For example:
+<br>&emsp;&emsp; int num  = 10;
+<br>
+<br>&emsp;&emsp;"num" actually contains 10, and not where it is in the memory, like location 10@001020. 
+<br>
+<br>Since the memory location for an object is stored instead, logic errors might occur! 
+This reference concept is tested on the AP computer Science A exam!
+<br>
+<br>
+Example:
+<br>
+<i> (Don't stress what arrays and for loops are. 
+Just know how reference can affect objects. We will go over these technical concepts later).</i> 
+<br>
+<img src="../Images/Reference.PNG" alt="" style="width:80%;height:80%;">
+<br>
+<br>This actually outputs:
+<br>1
+<br>1
+<br>1
+<br>1
+<br>
+<br>You would think that num2 originally gets assigned num1, 
+and that's the end of the story. However, changing num2 actually AFFECTS num1 too! 
+This is because they are pointing to the same location in the computer's memory. 
+Num1 is num2, and num2 is literally num1.
+<br>
+<br>It doesn't output:
+<br>
+<br>0
+<br>1
+<br>2
+<br>3
+<br>
+<br>HOWEVER:
+<br>
+<img src="../Images/Reference1.PNG" alt="" style="width:600px;height:300px;">
+<br>Outputs:
+<br>
+1
+<br>(num1 isn't affected by the change in num2, since in this case, num1 is a primitive data type!) 
+<br>
+<br>
+<strong>Null Reference:</strong>
+<br>
+Null means not referring to any object (null = nothing). Note that object variables 
+are automatically initialized to null in Java if you don't assign them to something. 
+<br>
+<br>ex) Scanner myScanner; (this is a null reference). 
+<br>
+<br>
+<div class="parallax1"></div>
+<br><strong>Class Attributes:  </strong>
+<br>
+You can create objects to access class attributes, or to change/override existing class attributes.
+<br>
+<br><i>NOTE: you don't have to access class attributes with objects. This is one of numerous ways.</i>
+<br>
+<br> Example:
+<br>
+<center><img src="../Images/ClassAttributes.PNG" alt="" style="width:90%;height:90%;"></center>
+<br>
+<br>You can have as many objects as you want, 
+and changing the attributes of one object won't affect the attributes of another. 
+<br>
+<br>Example: 
+ <br> <img src="../Images/ClassAttributes1.PNG" alt="" style="width:90%;height:90%;">
+<br>
+</div>
+</p>
+<br>
+	<form action="../Unit2WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\Unit2.2Quiz.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Practice</button>
+          </form>
+</div>
+<div class="parallax"></div>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+
+</body>
+</html>

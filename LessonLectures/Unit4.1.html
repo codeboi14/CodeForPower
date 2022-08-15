@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  min-height: 750px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 2000px; /* Used to enable scrolling */
+  background: linear-gradient(55deg, #6699cc 0%, #cce6ff 51%, #f2f2f2 85%);
+  
+  
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px"; "padding-right:25px">
+<strong><bold>Unit 4.1: For Loop</bold></strong> 
+
+
+<div style="font-size:2vw;">
+<br>
+<strong>What Is A Java Loop?</strong>
+<br>
+As the name implies, a loop is a section of code that repeats a certain action for 
+a certain amount of time. There are three types of loops to learn in Java: the do-while, 
+for, and while loop. These three loops are all slight variations of one another. 
+<br>
+<br>
+<strong>Requisites for All Loops (The 3 C's) </strong>
+<br>
+All loops require the following conditions in order to function properly:
+<br>
+<br>&emsp;1) Counter initialization (loop control variable, LCV)
+<br>&emsp;2) Conditional check (a boolean that deternmines when to stop the loop)
+<br>&emsp;3) Counter update of the LCV (increment/decrement)
+<br>
+<br>
+The 3 C's within any loop serves to limit how many times the loop should iterate, 
+and update certain values.
+Without these conditions in place, the loop will not compile or result in an 
+infinite loop (a run-time error). Note that these three components may appear 
+in different places within the while and do-while loops due to logical necessity. 
+<br>The for loop is the exception to this as it requires all three components to be 
+listed according to its syntax. 
+<br>
+<br>
+<strong>How Does A Java Loop Function?</strong>
+<br>
+ 
+The following sequence of execution is consistent throughout 
+all three types of loops in Java.
+<br>
+<br>&emsp;1) The LCV is initialized.
+<br>&emsp;2) The LCV is checked with the boolean condition to see if it returns true. 
+<br>&emsp;&emsp;&emsp;- (if true) &#8594; The code within the loop is executed
+<br>&emsp;&emsp;&emsp;- (if false) &#8594; The loop stops executing 
+<br>&emsp;3) The LCV is updated. Go back to #2.
+<br>
+<br>
+<div class="parallax1"></div>
+<br>
+<strong>The for loop </strong>
+<br>
+Thanks to its clear syntax layout, the for loop 
+is the easiest iterative statement to understand. 
+Note that the keyword "for" is necessary for Java 
+to identify the loop as a for loop.
+<br>
+<br>
+Syntax: 
+<br>
+
+	<br>&emsp;&emsp;for (initialized LCV declaration; boolean statement; incrementer/decrementer) 
+<br>	&emsp;&emsp;{
+<br>	&emsp;&emsp;&emsp;	//code block
+<br>	&emsp;&emsp;}
+<br>
+<br>
+Example: 
+<br>
+<br>
+<img src="../Images/Forloop.PNG" alt="" style="width:55%;height:55%;"> 
+<br>
+<br>
+For loops are generally used when you know exactly how many times you 
+want to loop through a block of code. In the example above, we just
+ want to loop through 3 times, and the for loop helps us accomplish this easily.
+<br>
+<hr>
+<br>
+<strong>Basic Things about Loops</strong>
+<br>
+<br>&emsp;1) You can have whatever code you want inside a loop, such as more loops! 
+<br> &emsp;&emsp;This is called nested loops (more on this topic later). 
+<br>
+<br>&emsp;2) The curly braces {} are not necessary.
+<br> &emsp;&emsp;Should they not be present, only the FIRST statement underneath the 
+loop will be controlled by the loop.  
+<br>
+<br>&emsp;3) Loops are not methods.
+<br>
+<br>
+<strong>Why For Loop Rocks!</strong>
+<br>
+The for loop is the easiest loop to debug and understand, so prevalent usage of this type of this loop is highly recommended. 
+<br>
+<br>
+Here is an example why: you use while loops when you don't know how many times 
+something will loop. 
+You can kind of think about this like... the Youtube algorithm. 
+If the algorithm works in helping you
+ find interesting videos, that's great! If it doesn't, 
+ then...you are kind of stuck hopeless. When using the for loop, you are in charge! 
+<br>
+<br>
+<strong>Beware of The Infinte Loop!</strong>
+<br>
+The main precaution you must take when programming loops is to avoid infinte looping, which happens
+when your boolean condition fails to stop the loop, hence making it run indefintley. For example, you want to 
+want to write a loop that prints out digits from 0 to 1000 through incrementing. 
+If you set your boolean condition to terminate the loop
+when the digit reaches -1000, obviously this will never happen, so the loop will continue indefintley. 
+<br>
+<br>
+<strong>Enhanced For Loop Introduction</strong>
+<br>The enhanced for loop, or the for-each loop, is simply another way to write the traditional for loop.  
+It is specifically used to loop through collections of data, 
+like an array. Because of this loop's intense connection 
+with this <i>array</i> concept, 
+you will learn the complete structure, function, and purpose of this loop in
+our next unit. 
+<br>
+</p>
+
+<br>
+<br>
+<br>
+	<form action="../Unit4WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\Unit4.1Quiz.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Practice</button>
+          </form>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</div>
+<div class="parallax"></div>
+</body>
+</html>

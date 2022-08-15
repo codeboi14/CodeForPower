@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 2000px; /* Used to enable scrolling */
+  background-color: #ffb3b3; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#e6f2ff 10%, #ffe6cc 85%, #ffe6e6 100%);
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px"; style="padding-right:25px">
+<strong><bold>Unit 2.6: JAVA Packages</bold></strong> 
+
+
+<div style="font-size:2vw;">
+<br>
+Packages are used to group related classes,
+ so it is another step of organization. Think of them like a folder 
+ containing files in your computer, or like the image below:
+
+<br>
+<br> <img src="../Images/Package.PNG" alt="" style="width:100%;height:100%;">
+<br>
+<br><strong>Benefits Packages Provide: </strong>
+<br>&emsp;1) Packages help avoid name conflicts. 
+<br>&emsp;&emsp;One class name in package1 won't conflict with the same class name in package2.
+<br>&emsp;2) Packages make your code organized and maintainable. 
+<br>
+<br>
+<strong>Types of Packages</strong>
+<br>
+There are two types of packages: 
+<br>
+<br>
+&emsp;1) Built in packages from the JAVA API (or Java library). 
+<br>&emsp;2) User defined packages.
+<br>
+<br>
+ <strong>Packages From The API:</strong>
+<br>The Java API contains numerous prewritten classes for you to use. 
+<br>You can import whole packages or an individual class.
+
+<br>
+<br> <img src="../Images/Package1.PNG" alt="" style="width:90%;height:90%;">
+<br>
+<br><strong>User defined packages: </strong>
+<br>You can create your own packages to organize your classes! 
+<br>To do this, you will need to understand the Java file system & directory. 
+<br>
+<br>
+<i>*We won't cover these package types since they aren't tested on the AP Computer Science A exam. 
+</i>
+<br>
+</p>
+<br>
+<br>
+<br>
+<br>
+	<form action="../Unit2WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="Unit2.7.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Unit Review</button>
+          </form>
+</div>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+<div class="parallax"></div>
+</body>
+</html>

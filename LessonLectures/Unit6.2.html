@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  min-height: 740px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 1500px; /* Used to enable scrolling */
+   background-color: #ebfaeb; /* For browsers that do not support gradients */
+
+  background-image: linear-gradient(#cceeff 10%, #b3d1ff 85%, #b3e6b3 115%);
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px"; "padding-right:25px">
+<strong><bold>Unit 6.2: Binary Search</bold></strong> 
+
+<br>
+<div style="font-size:2vw;">
+<br>
+<strong>Binary Search</strong>
+<br>Binary search is divide and conquer styled, 
+and much more efficient than a linear search. There is a catch however!
+ The array must be sorted in order for a binary search to work. 
+ For example, an array in least to greatest like 1, 2, 3, etc. will work for binary
+ search. An array with values in a random order like 2, 9, 1, -3 etc.
+ will confuse poor little binary search. 
+<br>
+<br>
+<strong>Here is the logic behind a binary search:</strong>
+<br>
+&emsp;1) Divide the array in half, and find the middle value of that array.
+<br>
+&emsp;2) Look at the target, is the target larger or smaller than that middle value? 
+<br> &emsp;&emsp;If larger, discard the lower half of the array. 
+If smaller, discard the upper half of the array.  
+<i><br>&emsp;&emsp;*You should see why this will require binary search to 
+have already sorted arrays, 
+<br>&emsp;&emsp;  as this process won't work if the array isn't sorted.</i>
+<br>
+&emsp;3) With your array length cut in two, repeat process 1 & 2. If the middle value = target, the search stops. 
+<br>
+<br><strong>
+Example: Let's say you want to find where 5 is located in the following array, and return its subscript.</strong>
+<br>
+<br>
+<img src="../Images/Search1.PNG" alt="" style="width:60%;height:60%;">
+<br>
+<br>
+A binary search will work like this:
+<br>
+<br>
+<center><img src="../Images/Search2.PNG" alt="" style="width:85%;height:85%;"></center>
+<br>
+Here is what the binary search logic will look like in code:
+<br>
+<br>
+<img src="../Images/BinarySearch.PNG" alt="" style="width:60%;height:60%;">
+<br>
+<br>
+<i>NOTE: binary searches run in at least O(logN) time as it splits each search by 2 
+(note that the base of the log does not matter here). 
+This is much more efficient than the O(N)
+ time that is needed for linear searches. </i>
+</p>
+<br>
+<br>
+
+<br>
+	<form action="../Unit6WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\Unit6.2Quiz.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Practice</button>
+          </form>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</div>
+<div class="parallax"></div>
+</body>
+</html>

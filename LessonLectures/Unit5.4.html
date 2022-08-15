@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  min-height: 700px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 1500px; /* Used to enable scrolling */
+  background: linear-gradient(55deg, #c2f0c2 5%, #cce6ff 61%, #f2f2f2 95%);
+  
+  
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px"; "padding-right:25px">
+<strong><bold>Unit 5.4: ArrayLists</bold></strong> 
+
+<br>
+<div style="font-size:2vw;">
+<br>
+<strong>What Is An ArrayList?</strong>
+<br>
+An ArrayList is a resizable array, meaning that 
+it doesn't contain a predetermined size, and 
+can contain dynamic input. Additionally, ArrayLists 
+can store objects ONLY, and come with its
+ own set of special methods used to perform basic functions, like adding, 
+ acessing, & removing elements of the array. 
+<br>
+<br>
+<strong>ArrayList Syntax: </strong>
+<br>
+<br>
+&emsp;&emsp;ArrayList &lt;yourObj&gt; identifier  = new ArrayList &lt;yourObj&gt;();
+<br>
+<br>1) Specify the class name: ArrayList
+<br>2) Provide the object type you want the ArrayList to store in &lt;yourObj&gt;
+<br>3) Give you arrayList an identifier(name).
+<br>4) Write the "new" keyword, the class ArrayList, 
+and it's parameters (just like declaring an object).
+<br>
+<br>
+Example: 
+<br>
+<br>
+&emsp;&emsp;ArrayList &lt;String&gt; myArrayList = new ArrayList &lt;String&gt;();
+<br>
+<br>
+<div class="parallax1"></div>
+<br>
+<strong>Important Aspects About ArrayList:</strong>
+<br>
+<br>1) It's Resizeable:
+You know that plain arrays have a predetermined size, 
+meaning that you can't add or subtract elements from the array. 
+Since ArrayLists are dynamic, they are able to overcome this issue.
+<br>
+<br>2) Storing Objects:
+Because ArrayLists can ONLY store objects,
+ you can't store primitives like int, double, 
+ boolean etc. To overcome this issue, wrapper classes that "wrap"
+ around the primitive in a class structure are provided. Note that 
+ wrapper classes basically act like regular primitives, so don't
+ worry how they function. You just need to know how to declare them.  
+<br>
+<br>For example, to store an ArrayList of int type, 
+specify its wrapper class instead.
+<br>
+<br>&emsp;&emsp;ArrayList &lt;Integer&gt; myArrayList = new ArrayList&lt;Integer&gt;();
+<br>
+<br>Here are all the wrapper classes:
+<br>
+<br>
+<center><img src="../Images/ArrayList.PNG" alt="" style="width:72%;height:72%;"> </center>
+<br>
+The circled wrapper classes are the only ones you need to know. 
+
+<br>
+</p>
+<br>
+<br>
+<br>
+	<form action="../Unit5WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="Unit5.5.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue to ArrayList Methods</button>
+          </form>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</div>
+<div class="parallax"></div>
+</body>
+</html>

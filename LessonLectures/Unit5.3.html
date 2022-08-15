@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  min-height: 750px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 1500px; /* Used to enable scrolling */
+  background: linear-gradient(55deg, #c2f0c2 5%, #cce6ff 61%, #f2f2f2 95%);
+  
+  
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px"; "padding-right:25px">
+<strong><bold>Unit 5.3: 2-D Arrays</bold></strong> 
+
+<br>
+<div style="font-size:2vw;">
+<br>
+<strong>Array Dimensions</strong>
+<br>Arrays are quite special, as they can have as many dimensions as you want. 
+The dimension of an array is the number of indices that are necessary for the 
+specification of an element in the array. Furthermore, the amount of dimensions an array 
+has can be identified by the number of square brackets [] that follow the data type of the array. 
+<br>
+<br>
+<img src="../Images/2Darray.PNG" alt="" style="width:60%;height:60%;"> 
+<br>
+<br>
+<i>Note* One bracket is known as a linear array while N brackets (N > 1) are called N-dimensional arrays. </i>
+<br>
+<br>
+<strong>Interpreting Multi-dimensional Arrays</strong>
+<br>Multi-dimensional arrays are arrays inside of arrays.
+This concept can be difficult to grasp, so we will provide some ways to think about them.
+<br>
+<pre>Real World Example:</pre>
+A vending machine has rows and collumns to show where different goodie-goods are located. For the rows,
+it has an array storing that data. For the collumns, it has another array storing that data. Now that's a 2D array!
+Let's say you want to access the "Lip-Popping Smack Gum". Well, you have to specify the row FOLLOWED by the collumn that 
+the gum is located in so you can get it out of the vending machine. 
+Thus, you might do something like this: giveMeStuffIn[0][1]. 
+Now you just learned how to access elements in a 2D array! Wow!
+<br>
+<br>
+<strong>&emsp;Syntax (2-D array): </strong>
+<br>
+&emsp;&emsp;1) Declaring an array with N rows and M columns:
+<br>
+&emsp;&emsp;&emsp;int[ ][ ] num2 = new int [Nrows][Mcollumns];  
+<br>
+<br>
+&emsp;&emsp;2) Directly declaring an array with curly braces:
+<br>
+&emsp;&emsp;&emsp;int[ ][ ] num3 = {{1, 2, 3... N-2, N-1}, {1, 2, 3... M-2, M-1}};
+<br>
+<br>
+<strong>Given the 2-D Array, You Can Visualize It Like This:</strong>
+<br>
+<br>int[ ][ ] num = {{1, 2, 3}, {4, 5, 6}};
+<br>
+<br>This 2D array has 2 rows and 3 columns:
+<br>
+<br>&emsp;&emsp;123
+<br>&emsp;&emsp;456
+<br>
+<br>
+<strong>Using Indexes To Access Elements In Multi-Dimensional Arrays.</strong>
+<br>
+You can access elements in a multidimensional array by specifying each dimension's 
+index. 
+For a 2-D array, specify its row and column to access the element. 
+<br>
+<br>
+Let's say you want to access the value 5 in the 2D array. You can do the following:
+<br>
+<br>
+<img src="../Images/2Darray1.PNG" alt="" style="width:70%;height:70%;"> 
+<br>
+<br>
+<div class="parallax1"></div>
+<br>
+<strong>Populating 2-D Arrays</strong>
+<br>
+To populate 2-D arrays effectively, we need to use nested loops that 
+will help us access the rows and columns. 
+The number of for loops should = the number of dimensions. 
+Conventionally, you should go in order from row to column in 
+order to avoid logic errors 
+when populating the 2-D array. 
+<br>
+<br>
+2-D arrays are tricky brain-teaser like stuff, 
+and unfortunately, AP LOVES these types of questions. 
+<br>So... practicing your logical understanding! 
+<br>
+<br>Example:
+<br>
+<br>
+&emsp;<img src="../Images/2Darray2.PNG" alt="" style="width:60%;height:60%;"> 
+<br>
+<br>&emsp;This outputs:
+<br>&emsp;3 3 3
+<br>&emsp;3 3 3
+<br>&emsp;3 3 3
+<br>&emsp;3 3 3
+<br>
+<br>
+<i>Notice the usage of .length in multidimensional arrays. 
+The first usage of .length returns the size of row 1 in the array. 
+The second .length, num[i].length, returns the size of column i in the array. 
+</i>
+<br>
+<br>
+<strong>3-D Arrays</strong>
+<br>
+Just in case you encounter 3-D arrays in your computer science class, here is something that you should know. 
+3-D arrays are basically extensions of 2D arrays. 
+You can think of 3-D arrays as an x-y-z plane, useful for volume (length, width, depth).
+<br>
+<br>
+<pre>Syntax (3-D array): </pre>
+int[ ][ ][ ] num2 = new int [N][M][K];
+<br>
+<br>
+<pre>Declaring a 3-D array with curly braces:</pre>
+int[ ][ ][ ] num3 = {{1, 2, 3... N-2, N-1}, {1, 2, 3... M-2, M-1}, 
+{1, 2, 3... K-2, K-1}};
+<br>
+<br>
+<pre>Example (3-D array):</pre>
+int[ ][ ][ ] num2 = new int [2][3][4];
+<br>
+int[ ][ ][ ] num3 = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+<br>
+<br>
+<strong>Populating 3-D Arrays</strong>
+<br>
+<br>
+<img src="../Images/2Darray3.PNG" alt="" style="width:55%;height:55%;"> 
+<br>
+<br>
+For this 3-D array example, the first .length 
+returns the size of row 1 in the array. The second .length returns the size of 
+column j in the array. 
+The third .length returns the size of depth k in the array. 
+Think of this like traversing inside a hollow cube. 
+You first must determine which value of the three sides 
+you must be on in order to reach a specific point. 
+
+<br>
+</p>
+<br>
+<br>
+
+<br>
+	<form action="../Unit5WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\Unit5.2Quiz.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Practice</button>
+          </form>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</div>
+<div class="parallax"></div>
+</body>
+</html>

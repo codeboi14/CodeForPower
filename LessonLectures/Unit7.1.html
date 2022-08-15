@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  min-height: 740px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 1500px; /* Used to enable scrolling */
+ background-color: #ebfaeb; /* For browsers that do not support gradients */
+
+
+  background-image: linear-gradient(#cceeff 10%, #b3ffff 85%, #99e699 115%);
+  
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="padding-left:25px">
+<div style="font-size:4vw;">
+<strong><bold>Unit 7.1: Method Recursion</bold></strong> 
+
+<br>
+<div style="font-size:2vw;">
+<br>
+<strong>Method Recursion</strong>
+<br>Method recursion is a method calling itself over and over again like a loop. This technique helps break complicated problems into simple problems. Just like loops, the hard part to understanding method recursion is the logic behind it. How and why do we have to call a method over and over again in this specific way?
+<br>
+<br>
+<strong>Example:</strong> Let's say you want to create a method that multiplies a range of numbers like a factorial. 
+<br>
+<br>
+<img src="../Images/Recursion1.PNG" alt="" style="width:60%;height:60%;">
+<br>
+<br>
+<strong>Example Explained:</strong>
+<br>
+When the <i> factorial() </i> is called, it adds parameter n to the 
+multiple of all numbers smaller than n, and returns the result. 
+When n becomes 0, you reach the end of the factorial, and multiply by one 
+(so the rest of the answer isn't affected). 
+<br>
+<br>
+<strong>Tracing the program, we see the following:</strong> 
+<br>
+<br>factorial(3) will produce: 
+<br>
+<br>3 * factorial(3-1)
+<br>3 * (2 * factorial(2-1))
+<br>3 * (2 * (1 * factorial(1-1))
+<br>3 * (2 * (1 * factorial(0)))  <i>Note that when n = 0, it doesn't 
+satisfy the if condition, and goes to the else, which makes the method 
+factorial return 1.
+Any number multiplied by 1 is itself, so our answer isn't affected.</i> 
+<br>
+<br>
+3 * (2 * (1 * 1))) = 6
+<br>
+<br>
+<div class="parallax1"></div>
+<br>
+You see how clever we used method recursion to solve a factorial? 
+Instead of writing a long for loop like to solve a factorial like:
+<br>
+<br>
+
+&emsp;&emsp;<img src="../Images/Recursion2.PNG" alt="" style="width:40%;height:40%;">
+<br>
+<br>
+We solved a factorial by simply writing:
+<br>
+n * factorial(n-1);
+<br>
+<br>
+<hr>
+<br>
+Method recursions are kind of like a computer chip. Looking at the 
+computer chip at a elementary level, it's quite dumb, 
+as it is only capable of understanding 1s and 0s. 
+However, by repeating those 1s and 0s numerous times, 
+you have an extremely powerful chip able to do calculations 
+and run graphic intensive video games.
+Method recursion is like the same thing. 
+See how elementary this statement <i>n * factorial(n-1)</i> is?  
+However, when you compound these simple things, it becomes very powerful.
+<br>
+<br>
+<strong>Halting Condition</strong>
+ <br>
+Just like how loops can run into the problem of infinite looping, method recursion can run into the problem of infinite recursion. To stop this from happening, we need a halting condition that tells the method when to stop calling itself. 
+<br>
+<br>
+In our previous example, we stopped the method when the n is not greater than 0, (in other words when n = 0, the method stops performing recursion). Some of the most common halting conditions is when the <strong> end </strong> is not greater than the <strong> start</strong>.
+<br>
+<br>
+<strong>Example:</strong> 
+<br>Let's say you want to add consecutive numbers 
+from a start to an end inclusively. Our method name will 
+be sum, so performing sum(1,3) = 1 + 2 + 3 = 6.
+<br>
+<br>
+<img src="../Images/Recursion3.PNG" alt="" style="width:60%;height:60%;">
+<br>
+<br>
+<strong>Tracing the recursion (so you understand it better): </strong>
+<br>
+<br>
+Here is how sum(1, 3) will work:
+<br>
+<br>3 + sum(1, 3 - 1)
+<br>3 + (2 + sum(1, 2 - 1))See how sum(1, 1) won't satisfy the if statement, 
+<br>which triggers the else statement to return "end", which is 1. 
+<br>3 + (2 + (1)) = 6 
+
+
+</p>
+<br>
+<br>
+<br>
+	<form action="../Unit7WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\Unit7.1Quiz.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Practice</button>
+          </form>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</div>
+</div>
+<div class="parallax"></div>
+</body>
+</html>

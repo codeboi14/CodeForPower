@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  height: 98%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 4000px; /* Used to enable scrolling */
+  background-color: #ffb3b3; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#e6f2ff 10%, #ffe6cc 85%, #ffe6e6 110%);
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px"; style="padding-right:25px">
+<strong><bold>Unit 2.4: Using Objects</bold></strong> 
+
+
+<div style="font-size:2vw;">
+<br>
+By knowing pre-written classes in the Java Library, you will have a easier time at writing code.
+<br>
+Below are some common classes & methods that you need to know for the AP Computer Science A exam.
+<br>
+<br>
+<strong>Math Class:</strong>
+<br>
+The math class helps perform many mathematical operations so you don't have to write 
+that code yourself. 
+<br>Thanks math class!
+
+<br> <img src="../Images/UsingObjects.PNG" alt="" style="width:95%;height:95%;">
+<br>
+<br><strong>Other Math Methods: </strong>
+<br>&emsp;1) Math.PI 
+<br>&emsp;&emsp;This is equivalent to a precise value of pi. You can use it in your mathematical operations.
+<br>
+<br>&emsp;2) Math.random()&emsp;&emsp;<i>THIS IS A VERY IMPORTANT MATH METHOD ON THE AP EXAM!</i>
+<br>
+<br> &emsp;&emsp;- The most basic Math.random() method gives your a random double in the range [0, 1).
+<br>
+<br>&emsp;&emsp;- You can type cast Math.random(). 
+For example, type cast to ints and get rid of decimals.
+<br>
+<br>&emsp;&emsp;- To change the range of the random values you want, 
+multiply Math.random() by the numbers of values you want.
+<br>
+<br>&emsp;&emsp;- You can add or subtract ints/doubles to Math.random() to change its lower bound.
+<br>&emsp;&emsp;This helps you deternmine what range you want your random values to be. 
+<br>
+<br>&emsp;Example: return a random dice roll in the range [1, 6]
+<pre>
+<br>&emsp;&emsp;&emsp;<strong>(int)</strong>Math.random() * 6 + 1
+</pre>
+<br>&emsp;Breakdown: 
+<br>&emsp;&emsp;1) (int) type casts Math.random() to only give integers.
+<br>&emsp;&emsp;2) *6 essentially times 6 to [0, 1), making the range [0, 6).
+<br>&emsp;&emsp;3) Since the dice roll requires a range from 1 to 6 inclusive, 
+<br>&emsp;&emsp;&emsp;you must change the lower bound of Math.random()'s default range. 
+<br>&emsp;&emsp;&emsp;+1 to Math.random() * 6 &#8594; [1, 7). Since we only have ints, [1, 7) gives us [1, 6]. 
+<br>
+<br>&emsp;<strong>General Formula:</strong> Math.random()* (number of values) + lower bound
+<br>
+<br>
+
+<div class="parallax1"></div>
+<br>
+<br>
+
+<strong>Fundamental Methods of The String Class:</strong>
+<br>
+
+Some methods that the String class provides are extremely fundamental to programming in Java.
+<br>
+<br>
+We will use this string: <i>String sample = "sample";</i> in our method examples on the String class below.
+<br>
+<br><i>Visual representation on what String sample looks like:</i>
+<br> <img src="../Images/UsingObjects1.PNG" alt="" style="width:750px;height:130px;">
+
+<br>
+<br>&emsp;1) .length()
+<br>
+<br>&emsp;&emsp;The length() method returns an int telling how many characters there are in your string. 
+<br>&emsp;&emsp;<i>*This is basically how long the index of your String is. </i>
+<pre
+<br>&emsp;&emsp;System.out.print(sample.length());
+</pre>
+&emsp;&emsp;Output: 6
+<br>
+<br>&emsp;2) .substring()
+<br>
+<br>&emsp;&emsp;The substring method will output a string from your starting index (inclusive) 
+to your ending index (exclusive).
+<pre>
+&emsp;&emsp;System.out.print(sample.substring(0,4));
+</pre>
+&emsp;&emsp;Output: "sam"
+<br> 
+<br>&emsp;&emsp;<i>NOTE: If you pass an number that is out of your string's index, 
+for example sample.substring(0,7), 
+<br>&emsp;&emsp;an IndexOutOfBoundsException error will occur. </i>
+<br>
+<br>&emsp;3) .indexOf()
+<br>
+<br>&emsp;&emsp;This method takes a substring as a parameter, 
+and returns the first index on where that substring occurs. 
+<pre>
+&emsp;&emsp;System.out.print(sample.indexOf("sam"));
+</pre>
+&emsp;&emsp;Output: 0
+<br>
+<br>&emsp;&emsp;<i>NOTE: If you pass a substring that doesn't occur, the indexOf method will return -1.
+</i>
+<br>
+<br><strong>Advanced String Methods</strong>
+<br>
+<br>&emsp;<strong>1) .toString() </strong>
+<br>
+<br>&emsp;&emsp;This is a method that all Java objects have. 
+
+The default toString() returns the String's location in the computer's 
+<br>&emsp;&emsp;memory (which is basically useless to programmers). 
+However, we can override the default toString into  
+<br>&emsp;&emsp;something useful, like returning
+a nice string format. 
+<br>
+<br>&emsp;&emsp;In the example below, we override the default toString method to output something
+ in a nice 
+date format. 
+<br> &emsp;&emsp;<img src="../Images/toString.PNG" alt="" style="width:50%;height:50%;">
+<br>
+&emsp;&emsp;Do you see how toString was used so that we don't have to keep writing a lengthy date
+format?
+<br>
+<br>
+<i>&emsp;&emsp;NOTE: Any object that this method is applied on will be returned as a string object.</i>
+<br>
+<br>&emsp;<strong>2) .equals()</strong>
+<br>
+<br>&emsp;&emsp;The equals method compares if two strings are equal. 
+It returns false if they aren't.
+<br>
+<br>
+&emsp;<strong>3) .compareTo() </strong>
+<br>&emsp;&emsp; compareTo() returns an int indicating which string comes first.  
+<br>
+<br>
+&emsp;&emsp;Given the code: 
+<br>
+<br> &emsp;&emsp;&emsp;<img src="../Images/UsingObjects2.PNG" alt="" style="width:690px;height:230px;">
+<br>
+<br>&emsp;&emsp;1) If it returns a positive, then s1 comes AFTER s2
+<br>
+<br>&emsp;&emsp;2) If it returns a negative, then s1 comes BEFORE s2 (in alphabetical order)
+<br>
+<br>&emsp;&emsp;3) If it returns 0, then s1 and s2 are identical (they have no precedence over each other)
+<br>
+<br><strong>How compareTo works:</strong>
+<br>Starting from index 0, compareTo() compares by looking at
+ each character of the two strings.
+<br>It deternmines which character comes first according to their ASCII values. 
+<br>
+<br>For example:
+<br>
+<br>&emsp;String s1 = "Aaaa";
+<br>&emsp;String s2 = "bBbb";
+<br>
+<br>&emsp;s1.compareTo(s2) will result in a negative, which indicates that the strings are in
+ alphabetical order. 
+<br> &emsp;The little compareTo method looks 
+at 'A' and 'b', and sees that A comes before b according to ASCII,
+ <br>&emsp;and thus returns an answer right away. 
+ <br>
+ <br>&emsp;<i>NOTE: compareTo() will keep comparing between characters until the string
+ ends. </i>
+<br>
+<br>
+<strong>Common Things To Know About CompareTo:</strong>
+<br>
+<br>&emsp;1) "37".compareTo("8") will actually give an answer, as the integers are inside "", 
+meaning that they are strings. 
+<br>&emsp;&emsp; If it is 37.compareTo(8), it won't work (notice the lack of ""). 
+<br>
+<br>&emsp;2) "Java".compareTo("JavaA")
+will return a negative, as "Java" is shorter than "JavaA". 
+<br>&emsp;&emsp; It will return positive if this is the opposite. 
+Note that this will only happen if the 
+<br>&emsp;&emsp; strings ARE EQUAL 
+up to the end.
+<br>
+<br>&emsp;3) ASCII can be tricky!
+<br>
+<br>
+&emsp;&emsp; "aAaaa".compareTo("Bbbb");
+<br>
+
+<br>&emsp;&emsp; This will actually return a positive, not a negative! 
+Why? "a" comes AFTER "B" in ASCII values. 
+<br>&emsp;&emsp; Thus, be very careful
+ when using trickly lill' compareTo()!
+<br>
+<br>&emsp; 4) Final thing about compareTo()! 
+<br>
+<br>&emsp;&emsp; 
+When you use compareTo() to compare strings, it actually 
+gives a PRECISE number in the positive or negative 
+<br>&emsp;&emsp; range. 
+However, you won't have much use for it, as you mostly care 
+if the number 
+<br>&emsp;&emsp; is positive (not in alphabetical order) or negative (alphabetical order). 
+
+<br>
+<br>&emsp;&emsp; <img src="../Images/UsingObjects3.PNG" alt="" style="width:1090px;height:150px;">
+
+<br>
+<br> <i>NOTE: You can find much more helpful 
+classes & methods in the Java Library.  </i>
+
+<br>
+<br>
+</p>
+<br>
+<br>
+	<form action="../Unit2WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\Unit2.4Quiz.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Practice</button>
+          </form>
+		  </div>
+</div>
+<div class="parallax"></div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  min-height: 700px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 4000px; /* Used to enable scrolling */
+  background-color: #ffb3b3; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#e6f2ff 5%, #ffe6cc 85%,#ffe6e6 90%);
+  overflow-x: hidden;
+}
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px">
+<strong>Basic Functions</strong> 
+
+<div style="font-size:2vw;">
+<br>
+<strong> Strings I. The Basics: </strong>
+<br>
+Strings are a series of characters (words) denoted by "". 
+Because strings are so commonly used, you might assume it is a primitive data type, 
+but it is not. Strings are actually OBJECTS (more on objects in Unit 2). 
+<br>
+<br>
+Examples on Using Strings:
+<br>
+<br> &emsp;1) You can declare strings
+<br>
+<br>      &emsp;  &emsp; String myString = "hiii! how are you?";
+<br>
+<br>    &emsp; 2) You can print strings with the statement: System.out.print or println 
+<br>		&emsp; <i> NOTE: println adds a new line AFTER your string. </i>
+<br>
+<br>       &emsp; &emsp; System.out.println("my string");
+<br>
+<br>       &emsp; &emsp; Outputs: my string
+<br>
+<br>    &emsp; 3) You can CONCATENATE strings with "+" (adds two strings together)
+<br>
+<br>     &emsp;  &emsp;  String myString = "finish this-";
+<br>	&emsp;	&emsp; String addThisString = "phrase";
+<br>	&emsp;	&emsp; System.out.print(myString + addThisString);
+<br>
+<br>	&emsp;	&emsp; Outputs: finish this-phrase
+<br>
+<br><i>NOTE: If you have a string in a statement, using "+" to add integers will 
+concatenate them instead. 
+<br></i>
+<br>
+
+<br>&emsp; For example:
+<br>
+ <br>	&emsp; &emsp;System.out.println("5 + 5 = " + 5 + 5) ;  
+<br> 	&emsp; &emsp;Outputs: 5 + 5 = 55  
+ <br>	&emsp; &emsp;(concatenates the ints to a string! Noooo!)  
+ <br>
+<br>To avoid this, use parenthesis (see that 5 + 5 = 10 now). 
+<br>	System.out.println("5 + 5 = " + (5 + 5) ) ;  
+ <br>	Outputs: 5 + 5 = 10 
+<br>
+
+<br><strong>String Indexes:</strong>
+<br>
+<br>There is an index to every String character.
+<br>
+<br>For example:
+
+<br>String = "myString"; has the following index for each character:
+<br>
+<pre>
+<br>Index: 0, 1, 2, 3, 4, 5, 6, 7
+<br>       m  y  S  t  r  i  n  g
+</pre>
+See that each character corresponds with an index. 
+Every index starts at 0.
+<br>
+<br><strong>Why In The World Do We Need To Know Indexes?</strong>
+<br>The index of a String has many purposes. 
+For example, you want to find a sub-segment of the String, do loops with the String, etc. 
+You will realize the full importance of indexes when you start coding in depth. 
+<br>
+<br><strong>Escape Sequences </strong>
+<br>The backslash (\) is an escape sequence that can perform special things. 
+<br>
+ <br> <strong>Must know escape sequences:  </strong>
+<br>
+<br>	&emsp;1) \n is used to indicate a new line  
+<br>
+<br>	&emsp; &emsp;Example: System.out.print ("escape" + \n + "sequence");
+<br>
+<br>	&emsp; &emsp;Outputs: escape
+<br>     &emsp; &emsp;&emsp; &emsp; &emsp;sequence
+<br>
+<br>	&emsp;2) \" is used to literally print quote marks. 
+<br>      &emsp; &emsp;\\ is used to literally print \.
+<br> 
+<br>      &emsp;&emsp; You can't print these special (", \) characters anyway else.   
+<br>
+<br>	&emsp; &emsp;Example: System.out.print("hi + \\ + \"");
+<br>
+<br>	&emsp; &emsp;Outputs: hi +  \ + "
+<br> 
+<br>	&emsp; 3) \t may be used to indent when printing  
+<br>
+<br>
+<br> <strong> Arithmetic Operations: </strong>
+<br>Java can do math! The symbols +, -, *, and / represents addition, 
+subtraction, multiplication and division, 
+respectively. The % "modulus" symbol gives the numerical remainder of division.
+<br>
+<br>
+<i>NOTE: when doing division, java "truncates" the answer. 
+For example, 4/3 = 1 to java, as it
+ savagely eliminates the decimal.
+ If you want Java to give a decimal answer, use double instead of int. </i>
+<br>
+<br>Example: 
+<br>   &emsp; int a = 10;
+<br>   &emsp; int b = 10;
+<br>
+<br>Doing the following in Java yields: 
+<br>	&emsp;a + b = 20 (addition)
+<br>	&emsp;a - b = 0 (subtraction)
+<br>	&emsp;a * b = 100 (multiplication)
+<br>	&emsp;a / b = 1 (division)
+<br>	&emsp;a % b = 0 (modulus)
+<br>
+<br>
+<div class="parallax1"> </div>
+<br>
+<br><strong> Precedence: </strong>
+<br>Java follows precedence just like regular math. 
+Division and multiplication is performed first, 
+unless there are parentheses. 
+<br>
+<br>
+&emsp;3 - (4/2) = 1 in Java. 
+<br>
+<br><strong>Casting: </strong>
+<br>Casting is a process where data is forced into another type of data. 
+Put the data you want to cast to in parentheses. 
+<br>
+<br> Example: changing an int to a double
+<br>
+<br> &emsp; System.out.print((double)2 );
+<br>       &emsp;  *prints 2.0 instead of 2
+<br>
+<br>		&emsp; System.out.print((double)(4/3));
+<br>		&emsp; *prints 1.0 (does 4/3 in int first, then casts) 
+<br>
+<br><i>NOTE: you can cast any primitive data type to another, but use logic when doing so. 
+For example, you can technically cast ints to booleans, but it doesn't make sense (sometimes). </i>
+<br>
+<br><strong>Operators I. Pre and Post Increment </strong>
+<br>
+<br>	1) Post-increment operator (x++)
+<br>
+<br>	&emsp;	y = x++ is equivalent to performing:
+<br>	&emsp;	y = x then x = x + 1 
+<br>
+<br>	2) Post-decrement operator(x--)
+<br>
+ <br> 	 	&emsp; y = x-- is equivalent to performing:
+<br>	 	&emsp; y = x then x = x - 1 
+<br>
+<br>	3) Other operators +=, -=, *=, /= & %=
+<br>
+<br>		&emsp;a+=b is equivalent to a = a + b
+<br>		&emsp;a*=b is equivalent to a = a * b
+<br>		&emsp;etc.
+
+<br>		
+<br>	4) Pre-increment operator (++x)
+<br>
+<br>		&emsp;y = ++ x is equivalent to performing:
+<br>		&emsp;x = x + 1 then y = x
+<br>	
+<br>	5) Pre-decrement operator(--x)
+<br>
+<br>		&emsp;y = --x is equivalent to performing:
+<br>		&emsp;x = x - 1 then y = x
+<br>	
+<br>		
+<i>NOTE: the order that x and y get assigned are flipped in pre and post increment/decrement. 
+Because of this, be careful of what you use, as it may result in logic errors. </i>
+<br>
+
+</div>
+
+</p>
+<br>
+<br>
+	<form action="../Lesson1WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\BasicFunctionsQuiz.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Practice</button>
+          </form>
+</div>
+<br>
+
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+<div class="parallax"></div>
+</body>
+</html>

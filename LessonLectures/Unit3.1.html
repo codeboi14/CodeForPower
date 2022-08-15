@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 2000px; /* Used to enable scrolling */
+  background: linear-gradient(55deg, #adebeb 0%, #99CCFF 51%, #D3D3D3 85%);
+  
+  
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 0.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:22px"; "padding-right:25px">
+<strong><bold>Unit 3.1: Boolean Expressions</bold></strong> 
+
+
+<div style="font-size:2vw;">
+<br>
+<strong>Booleans: </strong>
+<br>When programming, you often need a data type that can only have one of two values, like:
+<br>&emsp; &emsp;TRUE / FALSE
+<br>&emsp; &emsp;ON / OFF
+<br>&emsp; &emsp;etc.
+<br>These conditional statements can help accomplish numerous things. 
+For example, you want to program an algorithm to buy a product. 
+You can say if something is over $10, don't buy it. If something is under $10, buy it. 
+<br>
+<br>
+The boolean data type handles conditions in Java, as it can only store true or false.
+<br>
+<br>
+<strong>Conditions:</strong>
+<br>
+Java supports these logical conditions/boolean expressions from mathematics:
+<br>
+<br>
+<center>
+<img src="../Images/boolean1.PNG" alt="" style="width:95%;height:95%;">
+<br>
+</center>
+<br>
+<i>
+Note* a single "=" symbol means ASSIGNMENT. 
+For example, in <strong>int</strong> x = 1; x gets assigned the value 1. 
+<br>
+If you want to check if x is equivalent to 1, you have to use double equals.</i>
+<br>
+<br>
+<strong>Conditional Statements</strong>
+<br>
+Conditional statements control the execution of code based on 
+the true/false return from a boolean expression. 
+<br>There are two conditional 
+statements in Java; the if and else conditional statements.
+<br>
+<br>&emsp;- Use <strong>if</strong> to specify a block of code to be executed, if a specified condition is true
+<br>&emsp;- Use <strong>else</strong> to specify a block of code to be executed, if the same condition is false
+<br>&emsp;- Use <strong>else if </strong>to specify a new condition to test, if the first condition is false
+
+
+</p>
+<br>
+<br>
+<br>
+<br>
+	<form action="../Unit3WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="Unit3.2.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To If/Else Statements</button>
+          </form>
+</div>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+<div class="parallax"></div>
+</body>
+</html>

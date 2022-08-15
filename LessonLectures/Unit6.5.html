@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  min-height: 740px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 1500px; /* Used to enable scrolling */
+  background-color: #ebfaeb; /* For browsers that do not support gradients */
+
+  background-image: linear-gradient(#cceeff 10%, #b3d1ff 85%, #b3e6b3 115%);
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px"; "padding-right:25px">
+<strong><bold>Unit 6.5: Insertion Sort</bold></strong> 
+
+<br>
+<div style="font-size:2vw;">
+<br>
+<strong>Insertion Sort: </strong>
+<br>
+Insertion sort is a bit more complex than selection sort, but it is more efficient.
+ Here is how it works:
+<br>
+<br>
+<i>NOTE: our process details insertion sort sorting from least to greatest. </i>
+<br>
+<br>
+&emsp;1) Rather than traversing the entire array, the insertion sort compares 
+two adjacent elements, 
+<br>&emsp;&emsp;and depending on the comparison, inserts the second value in 
+front of the first value if its unsorted. 
+<br>
+&emsp;2) The sort checks the third element with the second element. If it's
+ not in order, insert it in the correct position. 
+<br>&emsp;&emsp;This process continues until the whole array is sorted. 
+<br>
+<br>
+<strong>Visual Understanding</strong>
+<br>
+Here is how the insertion sort LOGIC will work to sort the 
+following array from least to greatest.
+<br>
+<br>
+Original Array:
+<br>
+<br>
+<img src="../Images/InsertionSort1.PNG" alt="" style="width:50%;height:50%;">
+<br>
+<br>
+<strong>Step 1:</strong> compare the value in index 0 with that
+ in index 1 (adjacent elements). Since, 9 > -1, the elements are 
+ greatest to least, not our desired least to greatest. 
+ Since it's unsorted, we will <i> insert </i> -1 before 9. 
+ (We will tell how this <i> insert </i> process works in greater detail later). 
+<br>
+<br>
+<img src="../Images/InsertionSort2.PNG" alt="" style="width:60%;height:60%;">
+<br>
+<br>
+<strong>Step 2: </strong>compare the value in index 1 with that in index 2. 
+Since 9 > 3 (unsorted), we will have to <i> insert </i> 3 in the correct position. 
+Insert by comparing 3 with -1. 
+ -1 &lt; 3 (sorted) so put -3 after -1. 
+<br>
+<br>
+<img src="../Images/InsertionSort3.PNG" alt="" style="width:60%;height:60%;">
+<br>
+<br>
+<strong>Step 3: </strong>compare the value in index 2 with that in index 3.
+ Since 9 > 2 (unsorted), we will have to insert 2 in the correct position. 
+ Insert by comparing 2 with previous array elements.
+ 3 > 2 (unsorted), so compare 2 with -1, -1 &lt; 2 (sorted) so place 2 after -1. 
+<br>
+<br>
+<img src="../Images/InsertionSort4.PNG" alt="" style="width:60%;height:60%;">
+<br>
+<br>
+<strong>Step 4:</strong> compare the value in index 3 with that in index 4. 
+Since  9 > 4 (unsorted), we will need to insert 4. Insert by comparing 4 with 3.
+ 3 &lt; 4 (sorted) so place it after 3.
+<br>
+<br>
+<img src="../Images/InsertionSort5.PNG" alt="" style="width:60%;height:60%;">
+<br>
+<br>
+Inserting: Notice how when we are inserting, if the 
+symbol is GREATER THAN, it is unsorted, so you have to keep 
+checking where to insert.
+If the symbol is LESS THAN, it is sorted, so we just have to 
+insert the value after that element.
+Furthermore, notice how we have to SHIFT some values to the 
+right to make room for the insert to happen. 
+<br>We will explain how to code this part later.
+<br>
+<br>
+<div class="parallax1"></div>
+<br>
+<strong>Insertion Sort Algorithm (Least to Greatest)</strong>
+<br>
+ In terms of loops, the insertion sort will be shorter, 
+ as it optimizes which values to compare. In its worst case, 
+ insertion sort will take up to O(N) squared time. 
+ Note that the selection sort requires n-1 passes (as in swap), 
+ and the insertion sort also requires n-1 passes (as in insert). 
+ See how we took 4 inserting steps to sort the array above that had a length of 5. 
+<br>
+<br>
+
+<img src="../Images/InsertionSort.PNG" alt="" style="width:60%;height:60%;">
+<br>
+<br>
+<strong>Code Breakdown:</strong>
+<br>
+<br>&emsp;1) The outer for loop iterates n-1 times, as we need n-1 inserts.
+
+<br>&emsp;2) We need to create the variable temp, as the element we will insert will get overridden to make 
+<br>&emsp;&emsp;room for values that will start shifting to the right. 
+
+
+<br>&emsp;3) "movePos" keeps track of the index as values shift.
+
+<br>&emsp;4) The while loop controls how many elements need to get shifted to the right. 
+<br>&emsp;&emsp;It will stop shifting when values[swapPos] &lt; temp, 
+meaning you found the position to insert. 
+
+<br>&emsp;5) After you have made room in the array, you can insert our temp
+ variable to movePos + 1 
+<br>&emsp;&emsp;(since again, you insert AFTER the element that's less).
+<br>
+<br>
+
+</p>
+<br>
+<br>
+<br>
+	<form action="../Unit6WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\Unit6.4Quiz.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Practice</button>
+          </form>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</div>
+<div class="parallax"></div>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 2000px; /* Used to enable scrolling */
+  background: linear-gradient(55deg, #adebeb 0%, #99CCFF 51%, #D3D3D3 85%);
+  
+  
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px"; "padding-right:25px">
+<strong><bold>Unit 3.2: If/Else Statements</bold></strong> 
+
+
+<div style="font-size:2vw;">
+<br>
+<strong>The if statement</strong>
+<br>
+Use the if statement to specify a block of Java code to be executed if a condition is true.
+<br>
+<br>
+<strong>Syntax: </strong>
+<br>
+<br>
+<img src="../Images/if.PNG" alt="" style="width:610px;height:110px;">
+<br>
+<br>
+Example:
+<br>
+<br>
+<img src="../Images/if1.PNG" alt="" style="width:500px;height:150px;">
+<br>
+<br>
+<i>NOTE: The curly brackets are not necessary for conditional statements. 
+Should they not be there, only the DIRECT code underneath the conditional
+ statement will be influenced by it. However, it is proper programming
+ technique to include the braces for clarification purposes. This
+ same situation also applies with loops (more on loops in Unit 4). </i> 
+<br>
+<br>
+<strong>The else statement </strong>
+<br>Use the else statement to specify a block of code to be 
+executed if the condition is false. Unlike the if statement, 
+an else statement cannot exist on its own, and must come in pairs.
+ If you think about it, this 
+makes sense, since you must have an if statement in the first place so that the else condition might happen! 
+<br>
+<br>
+<strong>Syntax: </strong>
+<br>
+<br>
+<img src="../Images/if2.PNG" alt="" style="width:580px;height:200px;">
+
+<br>
+Do you see that there is no boolean condition in the else statement?
+<br>
+Else is simply just what happens if the <i>if</i> statement is not true. 
+<br>
+<br>
+<div class="parallax1"></div>
+<br>
+<strong>else if</strong>
+<br>
+Else statements can be paired with more if statements, but not more else statements.
+ These are called "else if" statements. Use else if to specify a new 
+ condition if the first condition is false.
+<br>
+<br>
+<img src="../Images/if3.PNG" alt="" style="width:800px;height:270px;">
+<br>
+<br>Here is a real-world-ish example of using else if:
+<br>Let's say you want to write code telling a robot to steal something only if 
+the reward is greater than the risk. 
+<br>(We don't encourage stealing! Computer science is a honest job, 
+but this is just a light-hearted educational example). 
+<br>
+<br>You might write code with the logic:
+<br>
+<br>&emsp;<i>If</i> the reward is above $100. Steal.
+<br>
+<br>&emsp;<i>Else if</i> the reward isn't $100, see if the security is low. If yes, steal. 
+<br>
+<br>&emsp;<i>Else</i>, don't steal. 
+<br>
+<br>Now you see why else if is useful!
+<br>
+<br>
+<strong>Coding Example:</strong>
+<br>
+Else if statements can be used for sequential comparing, such as assigning a student's 
+grade to a letter grade:
+<br>
+<img src="../Images/if4.PNG" alt="" style="width:65%;height:65%;">
+</p>
+<br>
+<br>
+
+<br>
+	<form action="../Unit3WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\Unit3.1Quiz.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Practice</button>
+          </form>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</div>
+<div class="parallax"></div>
+</body>
+</html>

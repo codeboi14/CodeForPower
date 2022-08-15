@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  min-height: 700px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 2000px; /* Used to enable scrolling */
+  background: linear-gradient(55deg, #c2f0c2 5%, #cce6ff 61%, #f2f2f2 95%);
+  
+  
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px"; "padding-right:25px">
+<strong><bold>Unit 5.1: Arrays</bold></strong> 
+
+
+<div style="font-size:2vw;">
+<br>
+<strong>What Are Arrays?</strong>
+<br>
+Arrays are a type of data structure that can store a large amount of data 
+in a single place. Each data structure comes with its own benefits and disadvantages 
+in terms of usability under different circumstances. Having said that, arrays will 
+be useful when there is a fixed amount of data input, and not so useful when there is
+dynamic data input. The last thing to know about arrays is that they are always objects. 
+<br>
+<br>
+<strong>How Are Arrays Declared in Java?</strong>
+<br>
+Arrays are declared with the variable type that you want the array to store, followed by square brackets. 
+The variable type can be a primitive or an object from the Java API or
+a user defined class. Note that an array can ONLY store the data 
+type that it was assigned to in its declaration.
+<br>
+<br><i> Note* If an array is declared but not assigned any value within 
+itself, numeric data types will be defaulted to 0, booleans will be 
+defaulted to false, and objects (reference types) to null. </i>
+<br>
+<br><strong>&emsp;Syntax:</strong>
+<br>
+&emsp;&emsp;&emsp;1) There are two ways to declare an array. The first method 
+doesn't assign any values to the array, 
+<br>&emsp;&emsp;&emsp;&emsp;but just declares that it exists, 
+and can store <i>sizeOfArray</i> amount of values.
+ <br>
+ <br>
+<strong>&emsp;&emsp;&emsp;&emsp;&emsp;dataType[] arrayName = new dataType[sizeOfArray];</strong>
+<br>
+<br>
+&emsp;&emsp;&emsp;Example:
+<br>
+<strong>&emsp;&emsp;&emsp;&emsp;&emsp;int[] num1 = new int [3]; </strong>
+
+
+<p style="color:green";>&emsp; &emsp;&emsp;&emsp;&emsp;//this array called num1 can hold 3 integers. (These integers have not been assigned). 
+</p>
+<br>
+&emsp;&emsp;&emsp;2) The second declaration method assigns values to the array right away. 
+<br>&emsp;&emsp;&emsp;The array's <i>index</i> (or how many values it can hold) is the number of 
+values that you list in the array.
+<br>
+<br>
+<strong>
+&emsp;&emsp;&emsp;&emsp;&emsp;dataType[] arrayName = {instances of dataType1, instances of dataType2...instances of dataTypeN};
+</strong>
+<br>
+<br>
+&emsp;&emsp;&emsp;Example:
+<br>
+<strong>
+&emsp;&emsp;&emsp;&emsp;&emsp;int[] num2 = {1, 2, 3}; </strong>
+<p style="color:green";>&emsp;&emsp;&emsp;&emsp;&emsp;//This array called num2 stores integers 1, 2, 3. </p>
+
+<br>
+<strong>In-Depth Recap: </strong>
+<br>The two sides of the assignment symbol (=) signify two steps in 
+the process of declaring an array. The left side tells the Java 
+Compiler that the name of your array will hold an array of your chosen data type. 
+The right side is the actual declaration of the array, signified by the "new" keyword. 
+This assigns the arrays to a REFERENCE location in memory, in which the contents of the 
+array are stored. Due to these two steps, Java arrays are dynamically allocated. Furthermore, arrays have a 
+predetermined size that you give it when its declared, which 
+dictates how many elements it can store. 
+<br>
+<br>
+<div class="parallax1"></div>
+<br><strong>Array Indexes</strong>
+<br>An array has an <i>index</i> that deternmines the location of a specific element. 
+Like Strings, an array's index starts at 0.
+<br>
+<br>
+Given the array: int[] myArray = {10, 20, 30};
+<br>
+<br>
+It's has the following index:
+<br>
+&emsp;<img src="../Images/array.PNG" alt="" style="width:65%;height:65%;"> 
+<br>
+<br>
+Let's say we want to print the value 20 stored in myArray. 
+We can accomplish this by calling myArray's index that contains the value 20. 
+This is a similar process with calling specific characters from a String.
+<br>
+<br>
+&emsp;System.out.print(myArray[1]); //outputs 20
+<br>
+<br>
+<strong> Changing An Array's Elements With the Index </strong>
+<br>
+Besides acessing elements, indexes also give us the ability to change elements in an array.
+Consider the following example, where we have a myPets array declared.
+Let’s say we want to change "hamster" to "goldfish"- 
+we can accomplish this by specifying the array's index
+containg <i>hamster</i>, and assigning that element to something new.
+
+<br>
+<br>
+&emsp;String myPets = {"dog", "cat", "hamster"};
+<br>
+&emsp;myPets[2] = "goldfish";
+<br>
+<br>
+The element at index 2 of the myPets array is changed to goldfish.
+<br>
+<br>
+<strong> Array Length </strong>
+<br>
+You can find the length of an array by using the length method. 
+<br>IMPORTANT! Unlike strings, the array's length method doesn't have parenthesis!
+<br><pre>Arrays:</pre>
+&emsp;String myPets = {"dog", "cat", "hamster"};
+<br>&emsp;myPets.length; //gives the length/size of the myPets array.
+<br>
+<br><pre>Strings:</pre>
+&emsp;String myString = "hi";
+<br>&emsp;myString.length(); //gives the length/size of the myString String.
+<br>
+<br>
+</p>
+<br>
+<br>
+<br>
+	<form action="../Unit5WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="Unit5.2.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Populating Arrays</button>
+          </form>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</div>
+<div class="parallax"></div>
+
+</body>
+</html>

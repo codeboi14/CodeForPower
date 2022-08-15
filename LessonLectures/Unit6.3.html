@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../Images/Duck.PNG");
+
+  /* Set a specific height */
+  min-height: 740px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  height: 1500px; /* Used to enable scrolling */
+  background-color: #ebfaeb; /* For browsers that do not support gradients */
+
+  background-image: linear-gradient(#cceeff 10%, #b3d1ff 85%, #b3e6b3 115%);
+  
+  overflow-x: hidden;
+}
+.parallax1 {
+  /* The image used */
+  background-image: url("../Images/HalfWay.PNG");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 4.1%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+
+<p>
+<div style="font-size:4vw;">
+<div style="padding-left:20px"; "padding-right:25px">
+<strong><bold>Unit 6.3: Bubble Sort</bold></strong> 
+
+<br>
+<div style="font-size:2vw;">
+<br>
+<strong>Swap Algorithm:</strong>
+<br>
+The swap algorithm is extremely simple, but fundamental 
+for the operation of sort algorithms. Here is how the swap works. Like the name implies, change two data sets by swapping their position. Below is a short example on swapping an array so that its elements are sorted from least to greatest:
+<br>
+<br>
+<img src="../Images/swap.PNG" alt="" style="width:50%;height:50%;">
+<br>
+<br>Here is what a swap algorithm looks like in code:
+<br>
+<br>
+<img src="../Images/swap1.PNG" alt="" style="width:55%;height:55%;">
+<br>
+<br>
+Notice how a temporary variable (temp) must be used to store the data that is going to be
+ overridden. Without doing this, the data that we want to swap would have been lost forever 
+ should it have not been assigned to the temp variable first.  
+<br>
+<br>
+<div class="parallax1"></div>
+<br>
+
+<strong>Bubble Sort</strong>
+<br>
+Bubble sort is an easy sorting algorithm that is useful for numerous applications 
+in Java. 
+Bubble sort basically swaps each variable in an array chronologically if the 
+adjacent elements
+are unsorted. Here is how it works:
+<br>
+<br>
+&emsp;1) The elements at index 0 & 1 are compared. If the values are out of order, 
+swap.
+<br>&emsp;2) The elements at index 1 & 2 are compared. If the values are out of
+ order, swap.
+<br>&emsp;3) This process continues until it reaches the end of the array. 
+<br>&emsp;&emsp;If the whole array isn't sorted, complete the entire process again. 
+<br>&emsp;&emsp;Keep doing this until the array is sorted. 
+<br>
+<br>
+<i> Note that if NO SWAPS are made after checking each adjacent element in the array, bubble sort knows that the array is in order, and exits the loop. </i>
+<br>
+<br>
+<strong>Visual Understanding:</strong>
+<br>
+We want to sort the following array from least to greatest. 
+The bubble sort will compare two adjacent terms, and perform swaps if necessary. 
+<br>
+<br>
+Our original array:
+<br>
+<br>
+<img src="../Images/sort.PNG" alt="" style="width:1000px;height:100px;">
+<br>
+<br>
+<pre>Step 1: </pre> 
+Compare the value in index 0 with that in index 1. We see that 3 > 1. 
+<br>This is not least to greatest, meaning that it's out of order. Swap.
+<br>
+<br>
+Array after step 1:
+<br>
+<br>
+<img src="../Images/sort1.PNG" alt="" style="width:1000px;height:100px;">
+<br>
+<br>
+<pre>Step 2:</pre> 
+Compare the value in index 1 with that in index 2. Since 3 is less than 9, 
+these two indexes are sorted, so don't swap.
+<br>
+<br>
+Array after step 2:
+<br>
+<br>
+<img src="../Images/sort2.PNG" alt="" style="width:1000px;height:100px;">
+<br>
+<br>
+<pre>Step 3:</pre> 
+Compare the value in index 2 with that in index 3. 9 > -2, so swap.
+<br>
+
+<br>Array after step 3:
+<br>
+<br>
+<img src="../Images/sort3.PNG" alt="" style="width:1000px;height:100px;">
+<br>
+<br>
+-<i>This array is not sorted, so bubble sort completes the entire process again. If NO SWAPS are made after checking each adjacent element in the array, bubble sort knows that the array is in order, and exits the loop.</i>
+<br>
+<br>
+<pre>Step 4: </pre>
+ Compare value in index 0 with that in index 1. 1 is less than  3 so don't swap.
+<br>
+<br>Array after step 4:
+
+<br>
+<br>
+<img src="../Images/sort4.PNG" alt="" style="width:1000px;height:100px;">
+
+<br>
+<br>
+<pre>Step 5:</pre>
+ Compare value in index 1 with that in index 2. 3 >  -2 so swap.
+<br>
+<br>Array after step 5:
+
+<br>
+<br>
+<img src="../Images/sort5.PNG" alt="" style="width:1000px;height:100px;">
+
+<br>
+<br>
+<pre>Step 6:</pre> 
+Compare value in index 2 with that in index 3. 3 is less than 9 so don't swap.
+<br>
+<br>Array after step 6:
+
+<br>
+<br>
+<img src="../Images/sort6.PNG" alt="" style="width:1000px;height:100px;">
+<br>
+<br>
+<pre>Step 7:</pre>
+Compare value in index 0 with that in index 1. 1 >  -2 so swap.
+<br>
+<br>Array after step 7:
+
+<br>
+<br>
+<img src="../Images/sort7.PNG" alt="" style="width:1000px;height:100px;">
+<br>
+<br>
+Did you see how each element in the array slowly "bubbled up" and "sank down"
+ after each pass in 
+the sort? In our context from sorting least to greatest, 
+bubbling up refers to the greatest value 
+going up to the greatest index value (end of the array), 
+while the smallest value of the data set sinks down to the lowest index value 
+(beginning of the array). 
+<br>
+<br>
+<i>Note that Bubble sort runs in O(N) squared time in the worst case, 
+meaning that it is EXTREMELY slow. You can even see this in our example, 
+where many comparisons were "unnecessary" as no swaps happen. 
+</i>
+<br>
+<br>
+<strong>Bubble Sort (Least to Greatest)</strong>
+<br>
+Bubble sort ends when no swaps occur, since no
+ swaps means that all values in the array are sorted. Because of this, 
+ we have a while loop, and the boolean condition "swapped"
+ to determine whether this has happened. 
+Note that for greatest to least, simply flip the sign in the if
+ statement. (The swap method we used is the one we talked about above). 
+<br>
+<br>
+<img src="../Images/Bubble.PNG" alt="" style="width:60%;height:60%;">
+<br>
+
+
+
+
+<br>
+<br>
+
+</p>
+
+<br>
+<br>
+<br>
+	<form action="../Unit6WebPage.html">
+    <button type="submit" class = "button" style = "float: left; position:relative; right:-30px; top:-100px;">Exit Lesson</button>
+	</form>
+	
+	
+         <form action="..\PracticeQuiz\Unit6.6Quiz.html">
+            <button type="submit" class = "button" style = "float: right; position:relative; left:-30px; top:-100px;">Continue To Practice</button>
+          </form>
+</div>
+<h2 style="position:fixed;">Scroll to see the effect.</h2>
+</div>
+<div class="parallax"></div>
+</body>
+</html>
